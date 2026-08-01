@@ -1,0 +1,1039 @@
+################################################################################
+# meta-info
+# :: snt1
+Index: 1 2 3 4 5 6 7
+Words: 减持 外汇 储备 回收 人民币 稳定 物价
+
+# sentence level graph:
+(s1x / 减持-00
+    :ARG1 (s1x2 / 储备-01
+        :mod (s1x3 / 外汇))
+    :aspect performance
+    :modal-strength full-affirmative
+    :purpose (s1x4 / 回收-01
+        :ARG1 (s1x5 / 人民币)
+        :aspect performance
+        :modal-strength full-affirmative
+        :purpose (s1x6 / 稳定-01
+            :ARG1 (s1x7 / 物价)
+            :aspect performance
+            :modal-strength full-affirmative)))
+
+# alignment:
+s1x: 1-1
+s1x2: 3-3
+s1x3: 2-2
+s1x4: 4-4
+s1x5: 5-5
+s1x6: 6-6
+s1x7: 7-7
+
+# document level annotation:
+(s1s0 / sentence
+    :temporal ((s1x :after s1x4)
+            (s1x4 :after s1x6))
+    :modal ((root :modal author)
+            (author :full-affirmative s1x)))
+
+
+################################################################################
+# meta-info
+# :: snt2
+Index: 1 2 3 4 5 6 7 8 9 10
+Words: 当前 ， 最 大 的 民生 问题 是 物价 。
+
+# sentence level graph:
+(s2x / identity-91
+    :ARG2 (s2x2 / 物价)
+    :ARG1 (s2x3 / 问题
+        :mod (s2x4 / 民生)
+        :ARG0-of (s2x5 / 大-01
+            :degree (s2x6 / 最)
+            :aspect state
+            :modal-strength full-affirmative))
+    :temporal (s2x7 / 当前)
+    :aspect state
+    :modal-strength full-affirmative)
+
+# alignment:
+
+# document level annotation:
+(s2s0 / sentence
+    :temporal ((document-creation-time :depends-on s2x7)
+            (s2x7 :contained s2x))
+    :modal ((root :modal author)
+            (author :full-affirmative s2x5)
+            (author :full-affirmative s2x))
+    :coref ((s1x7 :same-entity s2x2)))
+
+
+################################################################################
+# meta-info
+# :: snt3
+Index: 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22
+Words: 持续 增涨 的 物价 ， 迫 中等 收入 者 降低 了 生活 质量 ， 对 低 收入 者 更 是 雪上加霜 。
+
+# sentence level graph:
+(s3x / and
+    :op1 (s3x2 / 迫-01
+        :ARG0 (s3x3 / 物价
+            :ARG0-of (s3x4 / 增涨-00
+                :mod (s3x5 / 持续)
+                :aspect directed-activity
+                :modal-strength full-affirmative))
+        :ARG1 (s3x6 / 者
+            :mod (s3x7 / 收入
+                :mod (s3x8 / 中等)))
+        :ARG2 (s3x9 / 降低-01
+            :ARG0 s3x6
+            :ARG1 (s3x10 / 质量
+                :mod (s3x11 / 生活))
+            :aspect performance
+            :modal-strength full-affirmative)
+        :aspect performance
+        :modal-strength full-affirmative)
+    :op2 (s3x12 / 雪上加霜-01
+        :ARG0 s3x3
+        :ARG1 (s3x13 / 者
+            :mod (s3x14 / 收入
+                :mod (s3x15 / 低)))
+        :degree (s3x16 / 更)
+        :aspect state
+        :modal-strength full-affirmative))
+
+# alignment:
+s3x: 0-0
+s3x10: 0-0
+s3x11: 0-0
+s3x12: 0-0
+s3x13: 0-0
+s3x14: 17-17
+s3x15: 0-0
+s3x16: 0-0
+s3x2: 0-0
+s3x3: 0-0
+s3x4: 0-0
+s3x5: 0-0
+s3x6: 0-0
+s3x7: 0-0
+s3x8: 0-0
+s3x9: 0-0
+
+# document level annotation:
+(s3s0 / sentence
+    :temporal ((s3x4 :after s3x2)
+            (s3x4 :after s3x12)
+            (s3x2 :after s3x9))
+    :modal ((root :modal author)
+            (author :full-affirmative s3x4)
+            (author :full-affirmative s3x9)
+            (author :full-affirmative s3x2)
+            (author :full-affirmative s3x12)
+            (author :full-affirmative s3x))
+    :coref ((s2x2 :same-entity s3x3)))
+
+
+################################################################################
+# meta-info
+# :: snt4
+Index: 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17
+Words: 众所周知 ， 物价 的 增涨 会 使 人们 的 存款 和 收入 “ 缩水 ” 减少 。
+
+# sentence level graph:
+(s4x / 使-01
+    :ARG0 (s4x2 / 增涨-00
+        :ARG0 (s4x3 / 物价)
+        :aspect directed-activity
+        :modal-strength full-affirmative)
+    :ARG1 (s4x4 / and
+        :op1 (s4x5 / 存款
+            :poss (s4x6 / 人们))
+        :op2 (s4x7 / 收入
+            :poss s4x6))
+    :ARG2 (s4x8 / and
+        :op1 (s4x9 / 缩水-01
+            :ARG0 s4x4
+            :aspect directed-activity
+            :modal-strength full-affirmative)
+        :op2 (s4x10 / 减少-01
+            :ARG1 s4x4
+            :aspect directed-activity
+            :modal-strength full-affirmative))
+    :ARG0-of (s4x11 / 众所周知-01
+        :aspect state
+        :modal-strength full-affirmative)
+    :aspect generic
+    :modal-strength full-affirmative)
+
+# alignment:
+s4x: 0-0
+s4x10: 0-0
+s4x11: 0-0
+s4x2: 0-0
+s4x3: 0-0
+s4x4: 0-0
+s4x5: 0-0
+s4x6: 0-0
+s4x7: 0-0
+s4x8: 0-0
+s4x9: 0-0
+
+# document level annotation:
+(s4s0 / sentence
+    :temporal ((s4x2 :after s4x)
+            (s4x :after s4x9)
+            (s4x :after s4x10))
+    :modal ((root :modal author)
+            (author :full-affirmative s4x2)
+            (author :full-affirmative s4x9)
+            (author :full-affirmative s4x10)
+            (author :full-affirmative s4x11)
+            (author :full-affirmative s4x))
+    :coref ((s3x3 :same-entity s4x3)
+            (s3x4 :same-event s4x2)))
+
+
+################################################################################
+# meta-info
+# :: snt5
+Index: 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35
+Words: 持续 增涨 的 物价 要 严重 的 挫伤 国人 建设 社会主义 和谐 社会 的 积极性 和 信心 ， 甚至 会 引发 社会 的 不安定 ， 亟须 高度 重视 积极 应对 。 此 是 当务之急 。
+
+# sentence level graph:
+(s5x / and
+    :op1 (s5x2 / and
+    	:op1 (s5x3 / and
+    	    :op1 (s5x4 / 挫伤-01
+    	        :ARG0 (s5x5 / 物价
+    	            :ARG0-of (s5x6 / 增涨-00
+    	                :mod (s5x7 / 持续)
+    	                :aspect directed-activity
+    	                :modal-strength full-affirmative))
+    	        :ARG1 (s5x8 / and
+    	            :op1 (s5x9 / 积极性)
+    	            :op2 (s5x10 / 信心)
+    	            :poss (s5x11 / 国人)
+    	            :mod (s5x12 / 建设-01
+    	                :ARG0 s5x11
+    	                :ARG1 (s5x13 / 社会
+    	                    :mod (s5x14 / 社会主义)
+                            :mod (s5x15 / 和谐-01)
+    	                :aspect process
+    	                :modal-strength neutral-affirmative)))
+    	        :degree (s5x16 / 严重)
+    	        :aspect performance
+    	        :modal-strength full-affirmative)
+    	    :op2 (s5x17 / 引发-01
+    	        :ARG0 s5x5
+    	        :ARG1 (s5x18 / 安定-01
+    	            :ARG0 (s5x19 / 社会)
+    	            :polarity -
+    	            :aspect state
+    	            :modal-strength full-negative)
+    	        :degree (s5x20 / 甚至)
+    	        :aspect performance
+    	        :modal-strength neutral-affirmative))
+    	:op2 (s5x21 / 亟须-00
+    	    :ARG1 (s5x22 / and
+    	        :op1 (s5x23 / 重视-01
+    	            :ARG1 s5x3
+    	            :degree (s5x24 / 高度)
+    	            :aspect state
+    	            :modal-strength partial-affirmative
+    	            :modal-predicate s5x21)
+    	        :op2 (s5x25 / 应对-01
+    	            :ARG1 s5x3
+    	            :manner (s5x26 / 积极)
+    	            :aspect process
+    	            :modal-strength partial-affirmative
+    	            :modal-predicate s5x21))
+    	    :aspect state
+    	    :modal-strength full-affirmative))
+    :op2 (s5x27 / identity-91
+        :ARG1 (s5x28 / 此)
+    	:ARG2 (s5x29 / 当务之急)
+    	:aspect state
+    	:modal-strength full-affirmative))
+
+# alignment:
+s5x: 0-0
+s5x10: 0-0
+s5x11: 9-9
+s5x12: 0-0
+s5x13: 0-0
+s5x14: 0-0
+s5x15: 0-0
+s5x16: 0-0
+s5x17: 0-0
+s5x18: 0-0
+s5x19: 0-0
+s5x2: 0-0
+s5x20: 0-0
+s5x21: 0-0
+s5x22: 0-0
+s5x23: 0-0
+s5x24: 0-0
+s5x25: 0-0
+s5x26: 29-29
+s5x27: 0-0
+s5x28: 0-0
+s5x29: 0-0
+s5x3: 0-0
+s5x4: 0-0
+s5x5: 0-0
+s5x6: 0-0
+s5x7: 0-0
+s5x8: 0-0
+s5x9: 0-0
+
+# document level annotation:
+(s5s0 / sentence
+    :temporal ((s5x6 :after s5x4)
+            (s5x6 :after s5x17)
+            (s5x21 :after s5x23)
+            (s5x21 :after s5x25)
+            (s5x21 :overlap s5x27))
+    :modal ((root :modal author)
+            (author :full-affirmative s5x)
+            (author :full-affirmative s5x6)
+            (author :full-affirmative s5x4)
+            (author :neutral-affirmative s5x17)
+            (author :full-affirmative s5x21)
+            (s5x21 :partial-affirmative s5x23)
+            (s5x21 :partial-affirmative s5x25)
+            (author :full-affirmative s5x27))
+    :coref ((s4x3 :same-entity s5x5)
+            (s4x2 :same-event s5x6)
+            (s5x22 :same-event s5x28)))
+
+
+################################################################################
+# meta-info
+# :: snt6
+Index: 1 2 3 4 5 6 7 8 9 10 11 12 13
+Words: 物价 持续 增涨 的 根本性 主因 是 人民币 无 节制 的 投入 。
+
+# sentence level graph:
+(s6x / identity-91
+    :ARG1 (s6x2 / 主因
+        :cause-of (s6x3 / 增涨-00
+            :ARG0 (s6x4 / 物价)
+            :mod (s6x5 / 持续)
+            :aspect directed-activity
+            :modal-strength full-affirmative)
+        :mod (s6x6 / 根本性))
+    :ARG2 (s6x7 / 投入-01
+        :ARG1 (s6x8 / 人民币)
+        :manner (s6x9 / 节制
+            :polarity -)
+        :aspect process
+        :modal-strength full-affirmative)
+    :aspect state
+    :modal-strength full-affirmative)
+
+# alignment:
+s6x: 0-0
+s6x2: 0-0
+s6x3: 0-0
+s6x4: 0-0
+s6x5: 0-0
+s6x6: 0-0
+s6x7: 0-0
+s6x8: 0-0
+s6x9: 0-0
+
+# document level annotation:
+(s6s0 / sentence
+    :temporal ((s6x7 :after s6x3))
+    :modal ((root :modal author)
+            (author :full-affirmative s6x3)
+            (author :full-affirmative s6x7)
+            (author :full-affirmative s6x))
+    :coref ((s5x5 :same-entity s6x4)
+            (s5x6 :same-event s6x3)
+            (s1x5 :same-entity s6x8)))
+
+
+################################################################################
+# meta-info
+# :: snt7
+Index: 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19
+Words: 经济学 常识 明确 的 判定 ， 货币 总值 的 增加 必 会 引起 通货膨胀 ， 即 物价 增涨 。
+
+# sentence level graph:
+(s7x / 判定-01
+    :ARG0 (s7x2 / 常识
+        :mod (s7x3 / 经济学))
+    :ARG1 (s7x4 / 引起-01
+        :ARG0 (s7x5 / 增加-01
+            :ARG1 (s7x6 / 总值
+                :mod (s7x7 / 货币))
+            :aspect directed-activity
+            :modal-strength full-affirmative)
+        :ARG1 (s7x8 / 通货膨胀
+            :ARG1-of (s7x9 / identity-91
+                :ARG2 (s7x10 / 增涨-00
+                    :ARG0 (s7x11 / 物价)
+                    :aspect directed-activity
+                    :modal-strength full-affirmative)
+                :aspect state
+                :modal-strength full-affirmative))
+        :aspect performance
+        :modal-strength full-affirmative)
+    :manner (s7x12 / 明确)
+    :aspect state
+    :modal-strength full-affirmative)
+
+# alignment:
+s7x: 0-0
+s7x10: 0-0
+s7x11: 0-0
+s7x12: 0-0
+s7x2: 0-0
+s7x3: 0-0
+s7x4: 0-0
+s7x5: 0-0
+s7x6: 0-0
+s7x7: 0-0
+s7x8: 0-0
+s7x9: 0-0
+
+# document level annotation:
+(s7s0 / sentence
+    :temporal ((s7x5 :after s7x4)
+            (s7x4 :after s7x8)
+            (s7x8 :overlap s7x10))
+    :modal ((root :modal author)
+            (author :full-affirmative s7x5)
+            (author :full-affirmative s7x10)
+            (author :full-affirmative s7x9)
+            (author :full-affirmative s7x4)
+            (author :full-affirmative s7x))
+    :coref ((s6x4 :same-entity s7x11)
+            (s6x3 :same-event s7x10)))
+
+
+################################################################################
+# meta-info
+# :: snt8
+Index: 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18
+Words: 十 年 来 ， 人民币 总量 持续 增加 ， 甚至 有 人 说 增 了 六 倍 ！
+
+# sentence level graph:
+(s8x / and
+    :op1 (s8x2 / 增加-01
+        :ARG1 (s8x3 / 总量
+            :mod (s8x4 / 人民币))
+        :duration (s8x5 / temporal-quantity
+            :quant 10
+            :unit (s8x6 / 年))
+        :mod (s8x7 / 持续)
+        :aspect directed-activity
+        :modal-strength full-affirmative)
+    :op2 (s8x8 / 说-01
+        :ARG0 (s8x9 / 人
+            :ARG1-of (s8x10 / 有-03
+                :aspect state
+                :modal-strength full-affirmative))
+        :ARG1 (s8x11 / 增-01
+            :ARG0 s8x3
+            :ARG1 (s8x12 / product-of
+                :quant 6)
+            :aspect incremental-accomplishment
+            :modal-strength full-affirmative)
+        :degree (s8x13 / 甚至)
+        :aspect performance
+        :modal-strength full-affirmative))
+
+# alignment:
+s8x: 0-0
+s8x10: 0-0
+s8x11: 14-14
+s8x12: 0-0
+s8x13: 0-0
+s8x2: 0-0
+s8x3: 0-0
+s8x4: 0-0
+s8x5: 0-0
+s8x6: 0-0
+s8x7: 0-0
+s8x8: 0-0
+s8x9: 0-0
+
+# document level annotation:
+(s8s0 / sentence
+    :temporal ((document-creation-time :depends-on s8x5)
+            (s8x5 :contained s8x2)
+            (s8x5 :contained s8x11))
+    :modal ((root :modal author)
+            (author :full-affirmative s8x2)
+            (author :full-affirmative s8x10)
+            (author :full-affirmative s8x8)
+            (author :full-affirmative s8x)
+            (s8x9 :full-affirmative s8x11))
+    :coref ((s6x8 :same-entity s8x4)))
+
+
+################################################################################
+# meta-info
+# :: snt9
+Index: 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16
+Words: 笔者 无法 查证 ， 不足为凭 。 但 人民币 无 节制 的 投入 应 是 事实 。
+
+# sentence level graph:
+(s9x / contrast-91
+    :ARG1 (s9x2 / have-cause-91
+        :ARG2 (s9x3 / 查证-01
+            :ARG0 (s9x4 / 笔者)
+            :aspect process
+            :modal-strength full-negative)
+        :ARG1 (s9x5 / 不足为凭
+            :aspect state
+            :modal-strength full-affirmative)
+        :aspect state
+        :modal-strength full-affirmative)
+    :ARG2 (s9x6 / identity-91
+        :ARG1 (s9x7 / 投入-01
+            :ARG1 (s9x8 / 人民币)
+            :manner (s9x9 / 节制
+                :polarity -)
+            :aspect process
+            :modal-strength partial-affirmative)
+        :ARG2 (s9x10 / 事实)
+        :aspect state
+        :modal-strength partial-affirmative))
+
+# alignment:
+s9x: 0-0
+s9x10: 0-0
+s9x2: 0-0
+s9x3: 0-0
+s9x4: 0-0
+s9x5: 0-0
+s9x6: 0-0
+s9x7: 0-0
+s9x8: 0-0
+s9x9: 0-0
+
+# document level annotation:
+(s9s0 / sentence
+    :temporal ((s9x3 :after s9x5))
+    :modal ((root :modal author)
+            (author :full-negative s9x3)
+            (author :full-affirmative s9x5)
+            (author :full-affirmative s9x2)
+            (author :partial-affirmative s9x7)
+            (author :partial-affirmative s9x6)
+            (author :full-affirmative s9x))
+    :coref ((s6x7 :same-event s9x7)
+            (s6x8 :same-entity s9x8)
+            (s8x4 :same-entity s9x8)))
+
+
+################################################################################
+# meta-info
+# :: snt10
+Index: 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27
+Words: 美国 次贷 危机 引发 了 世界 金融 危机 ， 中国 中央 政府 投入 4万亿 人民币 ， 加上 地方 政府 配套 投入 合计 要 超 10万亿 人民币 。
+
+# sentence level graph:
+(s10x / have-cause-91
+    :ARG1 (s10x2 / 引发-01
+        :ARG0 (s10x3 / 危机
+            :mod (s10x4 / 次贷)
+            :place (s10x5 / country
+                :name (s10x6 / name
+                    :op1 "美国")))
+        :ARG1 (s10x7 / 危机
+            :mod (s10x8 / 金融)
+            :mod (s10x9 / 世界))
+        :aspect performance
+        :modal-strength full-affirmative)
+    :ARG2 (s10x10 / and
+        :op1 (s10x11 / 投入-01
+            :ARG0 (s10x12 / government-organization
+                :name (s10x13 / name
+                    :op1 "中国"
+                    :op2 "中央"
+                    :op3 "政府"))
+            :ARG1 (s10x14 / monetary-quantity
+                :quant 4000000000000
+                :unit (s10x15 / 人民币))
+            :aspect performance
+            :modal-strength full-affirmative)
+        :op2 (s10x16 / 投入-01
+            :ARG0 (s10x17 / 政府
+                :mod (s10x18 / 地方))
+            :mod (s10x19 / 配套)
+            :aspect performance
+            :modal-strength full-affirmative)
+        :ARG0-of (s10x20 / 超-01
+            :ARG1 (s10x21 / monetary-quantity
+                :quant 10000000000000
+                :unit (s10x22 / 人民币))
+            :aspect state
+            :modal-strength full-affirmative)))
+
+# alignment:
+s10x: 0-0
+s10x10: 0-0
+s10x11: 0-0
+s10x12: 0-0
+s10x13: 0-0
+s10x14: 0-0
+s10x15: 0-0
+s10x16: 0-0
+s10x17: 0-0
+s10x18: 0-0
+s10x19: 0-0
+s10x2: 0-0
+s10x20: 0-0
+s10x21: 0-0
+s10x22: 0-0
+s10x3: 0-0
+s10x4: 0-0
+s10x5: 0-0
+s10x6: 0-0
+s10x7: 0-0
+s10x8: 0-0
+s10x9: 0-0
+
+# document level annotation:
+(s10s0 / sentence
+    :temporal ((s10x3 :after s10x7)
+            (s10x7 :after s10x10)
+            (s10x11 :overlap s10x16))
+    :modal ((root :modal author)
+            (author :full-affirmative s10x2)
+            (author :full-affirmative s10x11)
+            (author :full-affirmative s10x16)
+            (author :full-affirmative s10x20)
+            (author :full-affirmative s10x))
+    :coref ((s9x8 :same-entity s10x15)
+            (s10x15 :same-entity s10x22)))
+
+
+################################################################################
+# meta-info
+# :: snt11
+Index: 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28
+Words: 此 举 ， 显现 了 中国 的 国力 和 责任感 ， 对 缓解 和 渡过 世界 金融 危机 作 了 贡献 ， 其 积极 作用 必须 肯定 。
+
+# sentence level graph:
+(s11x / and
+    :op1 (s11x2 / and
+        :op1 (s11x3 / 显现-01
+            :ARG0 (s11x4 / 举
+                :mod (s11x5 / 此))
+            :ARG1 (s11x6 / and
+                :op1 (s11x7 / 国力
+                    :poss (s11x8 / country
+                        :name (s11x9 / name
+                            :op1 "中国")))
+                :op2 (s11x10 / 责任感
+                    :poss s11x8))
+            :aspect performance
+            :modal-strength full-affirmative)
+        :op2 (s11x11 / 贡献-01
+            :ARG0 s11x4
+            :ARG2 (s11x13 / and
+                :op1 (s11x14 / 缓解-01
+                    :ARG1 (s11x15 / 危机
+                        :mod (s11x16 / 世界)
+                        :mod (s11x17 / 金融))
+                    :aspect process
+                    :modal-strength full-affirmative)
+                :op2 (s11x18 / 渡过-01
+                    :ARG1 s11x15
+                    :aspect performance
+                    :modal-strength full-affirmative))
+            :aspect performance
+            :modal-strength full-affirmative))
+    :op2 (s11x19 / 肯定-01
+        :ARG1 (s11x20 / 作用
+            :poss s11x4
+            :mod (s11x21 / 积极))
+        :aspect state
+        :modal-strength partial-affirmative))
+
+# alignment:
+s11x: 0-0
+s11x10: 0-0
+s11x11: 0-0
+s11x13: 0-0
+s11x14: 0-0
+s11x15: 0-0
+s11x16: 0-0
+s11x17: 0-0
+s11x18: 0-0
+s11x19: 0-0
+s11x2: 0-0
+s11x20: 0-0
+s11x21: 24-24
+s11x3: 0-0
+s11x4: 0-0
+s11x5: 0-0
+s11x6: 0-0
+s11x7: 0-0
+s11x8: 0-0
+
+# document level annotation:
+(s11s0 / sentence
+    :modal ((root :modal author)
+            (author :full-affirmative s11x3)
+            (author :full-affirmative s11x14)
+            (author :full-affirmative s11x18)
+            (author :full-affirmative s11x11)
+            (author :partial-affirmative s11x19)
+            (author :full-affirmative s11x))
+    :coref ((s10x10 :same-event s11x4)
+            (s10x7 :same-entity s11x15)))
+
+
+################################################################################
+# meta-info
+# :: snt12
+Index: 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16
+Words: 然而 ， 笔者 觉得 有些 过度 ， 其 投入量 或许 超过 了 中国 的 国力 。
+
+# sentence level graph:
+(s12x / 觉得-01
+    :ARG0 (s12x2 / 笔者)
+    :ARG1 (s12x3 / and
+        :op1 (s12x4 / 过度-01
+            :degree (s12x5 / 有些)
+            :aspect state
+            :modal-strength partial-affirmative
+            :modal-predicate s12x)
+        :op2 (s12x6 / 超过-01
+            :ARG0 (s12x7 / 投入量
+                :poss (s12x8 / 其))
+            :ARG1 (s12x9 / 国力
+                :poss (s12x10 / country
+                    :name (s12x11 / name
+                        :op1 "中国")))
+            :aspect state
+            :modal-strength neutral-affirmative
+            :modal-predicate s12x))
+    :aspect state
+    :modal-strength full-affirmative)
+
+# alignment:
+s12x: 0-0
+s12x10: 0-0
+s12x11: 0-0
+s12x2: 0-0
+s12x3: 0-0
+s12x4: 0-0
+s12x5: 0-0
+s12x6: 0-0
+s12x7: 0-0
+s12x8: 0-0
+s12x9: 0-0
+
+# document level annotation:
+(s12s0 / sentence
+    :modal ((root :modal author)
+            (author :full-affirmative s12x)
+            (s12x :partial-affirmative s12x4)
+            (s12x :neutral-affirmative s12x6))
+    :coref ((s9x4 :same-entity s12x2)
+            (s11x4 :same-event s12x8)
+            (s11x8 :same-entity s12x10)
+            (s11x7 :same-entity s12x9)))
+
+
+################################################################################
+# meta-info
+# :: snt13
+Index: 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24
+Words: 笔者 在 此 质疑 的 重点 是 中国 外汇 储备 过 大 ， 至 今年 6月 底 中国 外汇 储备 达 3197.91亿 美元 。
+
+# sentence level graph:
+(s13x / and
+    :op1 (s13x2 / identity-91
+        :ARG1 (s13x3 / 重点
+            :ARG1-of (s13x4 / 质疑-01
+                :ARG0 (s13x5 / 笔者)
+                :location (s13x6 / 此)
+                :aspect process
+                :modal-strength full-affirmative))
+        :ARG2 (s13x7 / 大-01
+            :ARG0 (s13x8 / 储备
+                :mod (s13x9 / 外汇)
+                :poss (s13x10 / country
+                    :name (s13x11 / name
+                        :op1 "中国")))
+            :degree (s13x12 / 过)
+            :aspect state
+            :modal-strength full-affirmative)
+        :aspect state
+        :modal-strength full-affirmative)
+    :op2 (s13x13 / 达-01
+        :ARG0 s13x8
+        :ARG1 (s13x14 / monetary-quantity
+            :quant 319791000000
+            :unit (s13x15 / dollar
+                :name (s13x16 / name
+                    :op1 "美元")))
+        :temporal (s13x17 / 至
+            :op1 (s13x18 / date-entity
+                :year (s13x19 / 今年)
+                :month 6
+                :mod (s13x20 / 底)))
+        :aspect state
+        :modal-strength full-affirmative))
+
+# alignment:
+s13x: 0-0
+s13x10: 0-0
+s13x11: 0-0
+s13x12: 0-0
+s13x13: 0-0
+s13x14: 0-0
+s13x15: 0-0
+s13x17: 0-0
+s13x18: 0-0
+s13x19: 0-0
+s13x2: 0-0
+s13x20: 0-0
+s13x3: 0-0
+s13x4: 0-0
+s13x5: 0-0
+s13x6: 0-0
+s13x7: 0-0
+s13x8: 0-0
+s13x9: 0-0
+
+# document level annotation:
+(s13s0 / sentence
+    :temporal ((document-creation-time :depends-on s13x18))
+    :modal ((root :modal author)
+            (author :full-affirmative s13x4)
+            (author :full-affirmative s13x7)
+            (author :full-affirmative s13x2)
+            (author :full-affirmative s13x13)
+            (author :full-affirmative s13x))
+    :coref ((s12x2 :same-entity s13x5)
+            (s12x10 :same-entity s13x10)
+            (s6x4 :same-entity s13x8)))
+
+
+################################################################################
+# meta-info
+# :: snt14
+Index: 1 2 3 4 5 6 7 8 9 10 11 12 13
+Words: 中国 是 出口 大 国 ， 有 1万亿 美元 储备 足 矣 。
+
+# sentence level graph:
+(s14x / and
+    :op1 (s14x2 / identity-91
+        :ARG1 (s14x3 / country
+            :name (s14x4 / name
+                :op1 "中国"))
+        :ARG2 (s14x5 / 国
+            :mod (s14x6 / 出口)
+            :mod (s14x7 / 大))
+        :aspect state
+        :modal-strength full-affirmative)
+    :op2 (s14x8 / 足-02
+        :ARG0 (s14x9 / 有-01
+            :ARG0 s14x3
+            :ARG1 (s14x10 / 储备
+                :quant (s14x11 / monetary-quantity
+                    :quant 1000000000000
+                    :unit (s14x12 / dollar
+                        :name (s14x13 / name
+                            :op1 "美元"))))
+            :aspect state
+            :modal-strength full-affirmative)
+        :aspect state
+        :modal-strength full-affirmative))
+
+# alignment:
+s14x: 0-0
+s14x10: 0-0
+s14x11: 0-0
+s14x12: 0-0
+s14x13: 0-0
+s14x2: 0-0
+s14x3: 0-0
+s14x4: 0-0
+s14x5: 0-0
+s14x6: 0-0
+s14x7: 0-0
+s14x8: 0-0
+s14x9: 7-7
+
+# document level annotation:
+(s14s0 / sentence
+    :modal ((root :modal author)
+            (author :full-affirmative s14x2)
+            (author :full-affirmative s14x9)
+            (author :full-affirmative s14x8)
+            (author :full-affirmative s14x))
+    :coref ((s13x10 :same-entity s14x3)
+            (s13x15 :same-entity s14x12)
+            (s13x8 :same-entity s14x10)))
+
+
+################################################################################
+# meta-info
+# :: snt15
+Index: 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31
+Words: 笔者 建议 ： 减少 二分之一 美元 储备 ， 用 1.6万亿 美元 进口 粮食 等 生活 必需品 和 原油 等 重要 物资 ， 回收 10万亿 人民币 ， 立即 可 稳定 物价 。
+
+# sentence level graph:
+(s15x / 建议-01
+    :ARG0 (s15x2 / 笔者)
+    :ARG1 (s15x3 / have-cause-91
+        :ARG2 (s15x4 / and
+            :op1 (s15x5 / 减少-01
+                :ARG1 (s15x6 / 储备
+                    :mod (s15x7 / 美元)
+                    :quant (s15x8 / percentage-entity
+                        :quant 0.5))
+                :aspect performance
+                :modal-strength partial-affirmative
+                :modal-predicate s15x)
+            :op2 (s15x9 / 进口-01
+                :ARG1 (s15x10 / and
+                    :op1 (s15x11 / 必需品
+                        :mod (s15x12 / 生活)
+                        :example (s15x13 / 粮食))
+                    :op2 (s15x14 / 物资
+                        :mod (s15x15 / 重要)
+                        :example (s15x16 / 原油)))
+                :instrument (s15x17 / monetary-quantity
+                    :quant 1600000000000
+                    :unit (s15x18 / dollar
+                        :name (s15x19 / name
+                            :op1 "美元")))
+                :aspect performance
+                :modal-strength partial-affirmative
+                :modal-predicate s15x)
+            :op3 (s15x20 / 回收-01
+                :ARG1 (s15x21 / monetary-quantity
+                    :quant 10000000000000
+                    :unit (s15x22 / 人民币))
+                :aspect performance
+                :modal-strength partial-affirmative
+                :modal-predicate s15x))
+        :ARG1 (s15x23 / 稳定-01
+            :ARG1 (s15x24 / 物价)
+            :temporal (s15x25 / 立即)
+            :aspect performance
+            :modal-strength neutral-affirmative)
+        :aspect state
+        :modal-strength partial-affirmative
+        :modal-predicate s15x)
+    :aspect performance
+    :modal-strength full-affirmative)
+
+# alignment:
+s15x: 0-0
+s15x10: 0-0
+s15x11: 0-0
+s15x12: 0-0
+s15x13: 0-0
+s15x14: 0-0
+s15x15: 0-0
+s15x16: 0-0
+s15x17: 0-0
+s15x18: 0-0
+s15x19: 0-0
+s15x2: 0-0
+s15x20: 0-0
+s15x21: 0-0
+s15x22: 0-0
+s15x23: 0-0
+s15x24: 0-0
+s15x25: 0-0
+s15x3: 0-0
+s15x4: 0-0
+s15x5: 0-0
+s15x6: 0-0
+s15x7: 0-0
+s15x8: 0-0
+s15x9: 0-0
+
+# document level annotation:
+(s15s0 / sentence
+    :temporal ((s15x4 :after s15x23))
+    :modal ((root :modal author)
+            (author :full-affirmative s15x)
+            (s15x :partial-affirmative s15x5)
+            (s15x :partial-affirmative s15x9)
+            (s15x :partial-affirmative s15x20)
+            (s15x :partial-affirmative s15x3)
+            (s15x :neutral-affirmative s15x23))
+    :coref ((s13x5 :same-entity s15x2)
+            (s15x6 :subset-of s13x8)
+            (s14x12 :same-entity s15x18)
+            (s10x22 :same-entity s15x22)
+            (s7x11 :same-entity s15x24)
+            (s1x4 :same-event s15x20)
+            (s1x6 :same-event s15x23)))
+
+
+################################################################################
+# meta-info
+# :: snt16
+Index: 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19
+Words: 请 有 良知 的 经济学家 不 要 袖手旁观 ， 为 中国 发展 、 为 民生 多 作 贡献 。
+
+# sentence level graph:
+(s16x / 请-01
+    :ARG1 (s16x2 / 经济学家
+        :ARG0-of (s16x3 / 有-01
+            :ARG1 (s16x4 / 良知)
+            :aspect state
+            :modal-strength full-affirmative))
+    :ARG2 (s16x5 / and
+        :op1 (s16x6 / 袖手旁观-00
+            :ARG0 s16x2
+            :aspect state
+            :modal-strength partial-negative)
+        :op2 (s16x7 / 贡献-01
+            :ARG0 s16x2
+            :ARG2 (s16x8 / and
+                :op1 (s16x9 / 发展-01
+                    :ARG1 (s16x10 / country
+                        :name (s16x11 / name
+                            :op1 "中国"))
+                    :aspect process
+                    :modal-strength partial-affirmative)
+                :op2 (s16x12 / 民生))
+            :degree (s16x13 / 多)
+            :aspect process
+            :modal-strength partial-affirmative))
+    :mode imperative
+    :aspect performance
+    :modal-strength full-affirmative)
+
+# alignment:
+s16x: 0-0
+s16x10: 0-0
+s16x11: 0-0
+s16x12: 0-0
+s16x13: 0-0
+s16x2: 0-0
+s16x3: 0-0
+s16x4: 0-0
+s16x5: 0-0
+s16x6: 0-0
+s16x7: 0-0
+s16x8: 0-0
+s16x9: 0-0
+
+# document level annotation:
+(s16s0 / sentence
+    :modal ((root :modal author)
+            (author :full-affirmative s16x3)
+            (author :full-affirmative s16x)
+            (s16x :partial-negative s16x6)
+            (s16x :partial-affirmative s16x9)
+            (s16x :partial-affirmative s16x7))
+    :coref ((s15x24 :same-entity s16x10)))
+
+

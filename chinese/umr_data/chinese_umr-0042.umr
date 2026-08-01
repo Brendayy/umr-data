@@ -1,0 +1,1111 @@
+################################################################################
+# meta-info
+# :: snt1
+Index: 1 2 3 4 5 6 7 8 9 10 11
+Words: 美国人 贫富 差距 拉大 富人 收入 增幅 是 穷人 15 倍
+
+# sentence level graph:
+(s1x / and
+    :op1 (s1x2 / 拉大-01
+        :modal-strength full-affirmative
+        :aspect performance
+        :ARG1 (s1x3 / 差距
+            :possessor (s1x7 / 美国人)
+            :mod (s1x5 / 贫富)))
+    :op2 (s1x6 / identity-91
+        :modal-strength full-affirmative
+        :aspect state
+        :ARG1 (s1p / product-of
+            :op2 (s1x1 / 穷人)
+            :op1 15)
+        :ARG2 (s1x10 / 增幅
+                        :mod (s1x11 / 收入-02
+                            :aspect performance
+                            :modal-strength full-affirmative
+                                  :ARG0 (s1x12 / 富人)))))
+
+# alignment:
+s1x: 0-0
+s1x1: 9-9
+s1x10: 0-0
+s1x11: 0-0
+s1x12: 0-0
+s1x2: 0-0
+s1x3: 0-0
+s1x5: 0-0
+s1x6: 0-0
+s1x7: 1-1
+
+# document level annotation:
+(s1s0 / sentence
+    :temporal ((document-creation-time :before s1x2))
+    :modal ((root :modal author)
+            (author :full-affirmative s1x2)
+            (author :full-affirmative s1x6)
+            (author :full-affirmative s1x11)))
+
+
+################################################################################
+# meta-info
+# :: snt2
+Index: 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39
+Words: 根据 美国 国会 预算 办公室 的 最新 报告 ， 从 1979年 到 2007年 ， 美国 最 富 的 1% 人口 的 收入 增加 了 2.75 倍 ， 而 最 穷 的 20% 人口 同期 收入 只 增加 18% 。
+
+# sentence level graph:
+(s2x / 根据-01
+    :aspect state
+    :modal-strength full-affirmative
+    :ARG0 (s2x2 / contrast-91
+         :aspect performance
+         :modal-strength full-affirmative
+         :ARG1 (s2x3 / 增加-01
+             :modal-strength full-affirmative
+             :aspect performance
+             :ARG2 (s2p1 / product-of
+                 :op1 2.75)
+             :ARG1 (s2x1 / 收入
+                 :possessor (s2x6 / 人口
+                     :quant (s2p / percentage-entity
+                         :value 1)
+                     :mod (s2x12 / 富
+                         :degree (s2x24 / 最))
+                     :possessor (s2c1 / country :name (s2n2 / name :op1 "美国")))))
+         :duration (s2x11 / between
+             :op2 (s2d / date-entity
+                 :year 2007)
+             :op1 (s2x13 / date-entity
+                 :year 1979))
+         :ARG2 (s2x14 / 增加-01
+             :aspect performance
+             :modal-strength full-affirmative
+             :ARG2 (s2p3 / percentage-entity
+                 :value 18)
+             :mod (s2x10 / 只)
+             :ARG1 (s2x4 / 收入
+                 :possessor (s2x7 / 人口
+                     :quant (s2p2 / percentage-entity
+                         :value 20)
+                     :mod (s2x8 / 穷
+                         :degree (s2x9 / 最)))
+                 :temporal (s2x5 / 同期))))
+    :ARG1 (s2x23 / 报告
+         :possessor (s2g / government-organization :name (s2n / name :op1 "国会" :op2 "预算" :op3 "办公室")
+             :mod (s2c / country :name (s2n1 / name :op1 "美国")))
+         :mod (s2x28 / 最新)))
+
+# alignment:
+s2c: 15-15
+s2c1: 15-15
+s2g: 3-3
+s2x: 0-0
+s2x1: 22-22
+s2x10: 36-36
+s2x11: 0-0
+s2x12: 17-17
+s2x13: 0-0
+s2x14: 0-0
+s2x2: 0-0
+s2x23: 0-0
+s2x24: 16-16
+s2x28: 0-0
+s2x3: 0-0
+s2x4: 35-35
+s2x5: 34-34
+s2x6: 20-20
+s2x7: 33-33
+s2x8: 30-30
+s2x9: 29-29
+
+# document level annotation:
+(s2s0 / sentence
+    :temporal ((s2x3 :overlap s2x14)
+            (document-creation-time :before s2x3))
+    :modal ((root :modal author)
+            (author :full-affirmative s2x)
+            (author :full-affirmative s2g)
+            (s2g :full-affirmative s2x2)
+            (s2g :full-affirmative s2x3)
+            (s2g :full-affirmative s2x14)))
+
+
+################################################################################
+# meta-info
+# :: snt3
+Index: 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21
+Words: 报告 还 发现 一 个 现象 ， 收入 越 低 的 阶层 ， 过去 30 年 收入 增幅 越 小 。
+
+# sentence level graph:
+(s3x / 发现-01
+    :aspect performance
+    :modal-strength full-affirmative
+    :ARG0 (s3x2 / 报告)
+    :ARG1 (s3x3 / 现象
+                :unit (s3x4 / 个)
+                :ARG1-of (s3x5 / identity-91
+                    :modal-strength full-affirmative
+                    :aspect state
+                    :ARG2 (s3c / correlate-91
+                        :aspect performance
+                        :modal-strength full-affirmative
+                        :ARG2 (s3h1 / have-degree-91
+                            :aspect performance
+                            :modal-strength full-affirmative
+                            :ARG3 (s3x18 / 越)
+                            :ARG2 (s3x17 / 小-01)
+                            :ARG1 (s3x9 / 增幅
+                                :temporal (s3x19 / 过去
+                                    :extent (s3t / temporal-quantity
+                                        :unit (s3x20 / 年)
+                                        :quant 30))
+                                :mod (s3x16 / 收入)))
+                        :ARG1 (s3h / have-degree-91
+                            :aspect performance
+                            :modal-strength full-affirmative
+                            :ARG3 (s3x8 / 越)
+                            :ARG2 (s3x7 / 低-01
+                                :ARG0 s3x1)
+                            :ARG1 (s3x1 / 收入
+                                :possessor (s3x6 / 阶层)))))
+                :quant 1)
+    :mod (s3x15 / 还))
+
+# alignment:
+s3x: 0-0
+s3x1: 8-8,10-10
+s3x15: 0-0
+s3x16: 8-8,17-17
+s3x17: 20-20
+s3x18: 19-19
+s3x19: 14-14,16-16
+s3x2: 0-0
+s3x20: 14-14,16-16
+s3x3: 0-0
+s3x4: 0-0
+s3x5: 0-0
+s3x6: 12-12
+s3x7: 10-10
+s3x8: 9-9
+s3x9: 18-18
+
+# document level annotation:
+(s3s0 / sentence
+    :temporal ((document-creation-time :before s3x))
+    :modal ((root :modal author)
+            (s2g :full-affirmative s3x)
+            (s2g :full-affirmative s3x5)
+            (s2g :full-affirmative s3c)
+            (s2g :full-affirmative s3h1)
+            (s2g :full-affirmative s3h)))
+
+
+################################################################################
+# meta-info
+# :: snt4
+Index: 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43
+Words: 仅 次于 最 富 的 1% 人口 的 20% 富人 ， 28 年 内 收入 增长 了 6成5 ， 虽然 比 不 上 最 富 的 1% ， 但 还是 比 近 80% 的 其它 阶层 人口 收入 增长 快 得 多 。
+
+# sentence level graph:
+(s4x / and
+     :op2 (s4x2 / contrast-91
+         :aspect state
+         :modal-strength full-affirmative
+         :ARG2 (s4x10 / 增长-01
+             :aspect performance
+             :modal-strength full-affirmative
+             :ARG1-of (s4x18 / 比-01
+                 :aspect performance
+                 :modal-strength full-affirmative
+                 :ARG2 s4x15)
+             :ARG0 (s4x5 / 收入
+                 :possessor (s4x6 / 人口
+                     :quant (s4p1 / percentage-entity
+                         :mod (s4x16 / 近)
+                         :value 80)
+                     :mod (s4x30 / 阶层
+                         :mod (s4x21 / 其它))))
+             :ARG1 (s4x13 / 快-01
+                 :aspect performance
+                 :modal-strength full-affirmative
+                 :degree (s4x14 / 多)))
+         :ARG1 (s4x3 / 比不上-01
+                  :aspect state
+                  :modal-strength full-affirmative
+                  :ARG1 (s4x4 / person
+                      :quant (s4p / percentage-entity
+                          :value 1)
+                      :mod (s4x17 / 富
+                          :degree (s4x25 / 最)))
+                  :ARG0 (s4x7 / 富人
+                                    :quant (s4x8 / percentage-entity
+                                               :value 20)
+                                    :ARG0-of (s4x9 / 仅次于-01
+                                        :modal-strength full-affirmative
+                                        :aspect state
+                                        :ARG1 (s4x11 / 人口
+                                                      :mod (s4x1 / 富
+                                                          :degree (s4x24 / 最))
+                                                      :quant (s4x12 / percentage-entity
+                                                                         :value 1))))))
+     :op1 (s4x15 / 增长-01
+         :aspect performance
+         :modal-strength full-affirmative
+         :duration (s4x26 / 内
+                              :op1 (s4x27 / temporal-quantity
+                                        :quant 28
+                                        :unit (s4x28 / 年)))
+         :ARG0 (s4x29 / 收入
+                   :possessor s4x7)
+         :ARG1 (s4x31 / percentage-entity
+                         :value 65)))
+
+# alignment:
+s4x: 0-0
+s4x1: 4-4
+s4x10: 39-39
+s4x11: 0-0
+s4x12: 0-0
+s4x13: 40-40
+s4x14: 42-42
+s4x15: 0-0
+s4x16: 32-32
+s4x17: 25-25
+s4x18: 31-31
+s4x2: 0-0
+s4x21: 35-35
+s4x24: 3-3
+s4x25: 24-24
+s4x26: 0-0
+s4x27: 0-0
+s4x28: 0-0
+s4x29: 0-0
+s4x3: 0-0
+s4x30: 36-36
+s4x31: 0-0
+s4x4: 0-0
+s4x5: 38-38
+s4x6: 37-37
+s4x7: 0-0
+s4x8: 0-0
+s4x9: 0-0
+
+# document level annotation:
+(s4s0 / sentence
+    :temporal ((document-creation-time :before s4x15)
+            (s4x15 :after s4x3)
+            (s4x3 :overlap s4x10)
+            (s4x10 :overlap s4x13))
+    :modal ((root :modal author)
+            (s2g :full-affirmative s4x2)
+            (s2g :full-affirmative s4x10)
+            (s2g :full-affirmative s4x18)
+            (s2g :full-affirmative s4x13)
+            (s2g :full-affirmative s4x3)
+            (s2g :full-affirmative s4x9)
+            (s2g :full-affirmative s4x15))
+    :coref ((s2x6 :same-entity s4x11)
+            (s2x6 :same-entity s4x4)))
+
+
+################################################################################
+# meta-info
+# :: snt5
+Index: 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24
+Words: 这 个 报告 指出 ， 即便 不 考虑 最 富 人群 收入 急剧 增加 ， 美国人 收入 不 平等 现象 还是 加剧 了 。
+
+# sentence level graph:
+(s5x / 指出-01
+    :aspect performance
+    :modal-strength full-affirmative
+    :ARG0 (s5x2 / 报告
+         :unit (s5x1 / 个)
+         :mod (s5x3 / 这))
+    :ARG1 (s5x4 / have-concession-91
+        :aspect state
+        :modal-strength full-affirmative
+        :ARG1 (s5x5 / 加剧-01
+                   :aspect performance
+                   :modal-strength full-affirmative
+                   :ARG1 (s5x6 / 现象
+                                   :ARG1-of (s5x7 / identity-91
+                                       :aspect state
+                                       :modal-strength full-affirmative
+                                       :ARG2 (s5x8 / 平等-01
+                                                     :aspect activity
+                                                     :modal-strength full-negative
+                                                     :ARG0 (s5x9 / 收入
+                                                               :possessor (s5x18 / 美国人))
+                                                     :polarity -))))
+        :ARG2 (s5x11 / 考虑-01
+            :aspect performance
+            :modal-strength full-negative
+            :polarity -
+            :ARG1 (s5x12 / 增加-01
+                :aspect activity
+                :modal-strength full-affirmative
+                :manner (s5x13 / 急剧)
+                :ARG1 (s5x14 / 收入
+                    :possessor (s5x10 / 人群
+                        :mod (s5x19 / 富
+                            :degree (s5x20 / 最))))))))
+
+# alignment:
+s5x: 0-0
+s5x1: 2-2
+s5x10: 11-11
+s5x11: 0-0
+s5x12: 0-0
+s5x13: 0-0
+s5x14: 0-0
+s5x18: 16-16
+s5x19: 10-10
+s5x2: 0-0
+s5x20: 9-9
+s5x3: 0-0
+s5x4: 0-0
+s5x5: 0-0
+s5x6: 0-0
+s5x7: 0-0
+s5x8: 0-0
+s5x9: 0-0
+
+# document level annotation:
+(s5s0 / sentence
+    :temporal ((document-creation-time :before s5x)
+            (s5x :before s5x11)
+            (s5x11 :before s5x5))
+    :modal ((root :modal author)
+            (s2g :full-affirmative s5x)
+            (s2g :full-affirmative s5x4)
+            (s2g :full-affirmative s5x5)
+            (s2g :full-affirmative s5x7)
+            (s2g :full-negative s5x8)
+            (s2g :full-negative s5x11)
+            (s2g :full-affirmative s5x12)))
+
+
+################################################################################
+# meta-info
+# :: snt6
+Index: 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55
+Words: 国会 预算 办 指出 ， 美国 最 富 人口 收入 骤增 的 原因 尚 不 很 明了 ， 可能 的 部分 原因 包括 技术 创新 使得 劳动力 市场 朝 有利于 演员 、 运动员 、 音乐家 等 超级 明星 的 方向 发展 ， 也 使得 执行官 的 薪资 增加 ， 金融 领域 活动 范围 扩大 。
+
+# sentence level graph:
+(s6x / 指出-01
+    :modal-strength full-affirmative
+    :aspect performance
+    :ARG0 (s6x2 / organization
+                :name (s6x3 / name
+                          :op1 "国会"
+                          :op3 "办"
+                          :op2 "预算"))
+    :ARG1 (s6x4 / and
+                :op1 (s6x5 / 明了-01
+                    :modal-strength full-negative
+                    :aspect activity
+                    :ARG1 (s6x6 / 原因
+                        :mod (s6x1 / 骤增-01
+                            :aspect performance
+                            :modal-strength full-affirmative
+                            :ARG0 (s6x18 / 收入
+                                :possessor (s6x26 / 人口
+                                    :mod (s6x14 / 富
+                                        :degree (s6x15 / 最))
+                                    :possessor (s6c / country :name (s6n / name :op1 "美国"))))))
+                    :mod (s6x7 / 尚)
+                    :degree (s6x8 / 很)
+                    :polarity -)
+                :op2 (s6x9 / 包括-01
+                    :modal-strength partial-affirmative
+                    :aspect state
+                    :ARG0 (s6x10 / 原因
+                                   :mod (s6x19 / 部分)
+                                   :ARG0-of (s6x20 / 可能-01
+                                       :modal-strength full-affirmative
+                                       :aspect performance))
+                    :ARG1 (s6x21 / and
+                                    :op1 (s6x22 / 使得-01
+                                        :modal-strength partial-affirmative
+                                        :aspect performance
+                                        :ARG1 (s6x23 / 市场
+                                                       :mod (s6x24 / 劳动力))
+                                        :ARG2 (s6x25 / 发展-01
+                                            :aspect performance
+                                            :modal-strength partial-affirmative
+                                            :ARG1 s6x23
+                                            :ARG3 (s6x27 / 方向
+                                                                   :ARG0-of (s6x28 / 有利于-01
+                                                                       :aspect state
+                                                                       :modal-strength full-affirmative
+                                                                       :ARG1 (s6x29 / 明星
+                                                                                          :mod (s6x30 / 超级)
+                                                                                          :example (s6x31 / and
+                                                                                                        :op2 (s6x33 / 运动员)
+                                                                                                        :op1 (s6x34 / 演员)
+                                                                                                        :op3 (s6x35 / 音乐家))))))
+                                        :ARG0 s6x36)
+                                    :op2 (s6x37 / 使得-01
+                                        :aspect performance
+                                        :modal-strength partial-affirmative
+                                        :ARG2 (s6x38 / and
+                                                         :op2 (s6x39 / 扩大-01
+                                                             :aspect performance
+                                                             :modal-strength partial-affirmative
+                                                             :ARG1 (s6x40 / 范围
+                                                                       :mod (s6x17 / 活动-01
+                                                                           :aspect performance
+                                                                           :modal-strength full-affirmative
+                                                                           :ARG0 (s6x32 / 领域
+                                                                               :mod (s6x12 / 金融)))))
+                                                         :op1 (s6x44 / 增加-01
+                                                             :modal-strength partial-affirmative
+                                                             :aspect performance
+                                                             :ARG1 (s6x45 / 薪资
+                                                                       :possessor (s6x13 / 执行官))))
+                                        :ARG0 (s6x36 / 创新
+                                                  :mod (s6x11 / 技术)))))))
+
+# alignment:
+s6c: 6-6
+s6x: 0-0
+s6x1: 11-11
+s6x10: 0-0
+s6x11: 24-24
+s6x12: 50-50,52-52
+s6x13: 45-45,51-51
+s6x14: 8-8
+s6x15: 7-7
+s6x17: 52-52
+s6x18: 10-10
+s6x19: 0-0
+s6x2: 0-0
+s6x20: 0-0
+s6x21: 0-0
+s6x22: 0-0
+s6x23: 0-0
+s6x24: 0-0
+s6x25: 0-0
+s6x26: 9-9
+s6x27: 0-0
+s6x28: 0-0
+s6x29: 0-0
+s6x3: 0-0
+s6x30: 0-0
+s6x31: 0-0
+s6x32: 51-51
+s6x33: 0-0
+s6x34: 0-0
+s6x35: 0-0
+s6x36: 0-0
+s6x37: 0-0
+s6x38: 0-0
+s6x39: 0-0
+s6x4: 0-0
+s6x40: 0-0
+s6x44: 0-0
+s6x45: 0-0
+s6x5: 0-0
+s6x6: 0-0
+s6x7: 0-0
+s6x8: 0-0
+s6x9: 0-0
+
+# document level annotation:
+(s6s0 / sentence
+    :temporal ((document-creation-time :before s6x)
+            (s6x :before s6x6)
+            (s6x6 :after s6x5)
+            (s6x5 :after s6x9)
+            (s6x9 :before s6x22)
+            (s6x22 :after s6x28)
+            (s6x28 :after s6x25)
+            (s6x25 :before s6x37)
+            (s6x37 :after s6x44)
+            (s6x44 :overlap s6x39))
+    :modal ((root :modal author)
+            (author :full-affirmative s6x2)
+            (s6x2 :full-affirmative s6x)
+            (s6x2 :full-negative s6x5)
+            (s6x2 :full-affirmative s6x1)
+            (s6x2 :partial-affirmative s6x9)
+            (s6x2 :full-affirmative s6x20)
+            (s6x2 :partial-affirmative s6x22)
+            (s6x2 :partial-affirmative s6x25)
+            (s6x2 :full-affirmative s6x28)
+            (s6x2 :partial-affirmative s6x37)
+            (s6x2 :partial-affirmative s6x39)
+            (s6x2 :full-affirmative s6x17)
+            (s6x2 :partial-affirmative s6x44))
+    :coref ((s5x10 :same-entity s6x26)
+            (s5x12 :same-event s6x1)))
+
+
+################################################################################
+# meta-info
+# :: snt7
+Index: 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29
+Words: EIU 国家 风险 项目 主任 保勒 26日 对 美国 广播 公司 说 ， 技术 为 高 技能 工人 创造 机会 ， 却 使 一些 常规 工作 显得 多余 。
+
+# sentence level graph:
+(s7x / 说-01
+    :aspect performance
+    :modal-strength full-affirmative
+    :ARG0 (s7x2 / person
+               :ARG1-of (s7x3 / have-org-role-92
+                   :aspect state
+                   :modal-strength full-affirmative
+                   :ARG2 (s7x4 / 项目
+                       :possessor (s7x1 / 国家)
+                       :mod (s7x5 / 风险)
+                       :name (s7x6 / name
+                                                  :op1 "EIU"))
+                   :ARG3 (s7x8 / 主任))
+               :name (s7x9 / name
+                          :op1 "保勒"))
+    :ARG3 (s7x10 / company
+               :name (s7x11 / name
+                         :op2 "广播"
+                         :op3 "公司"
+                         :op1 "美国"))
+    :ARG1 (s7x12 / contrast-91
+        :aspect state
+        :modal-strength full-affirmative
+        :ARG2 (s7x13 / 使-01
+            :aspect state
+            :modal-strength full-affirmative
+            :ARG1 (s7x14 / 工作
+                              :mod (s7x19 / 常规)
+                              :quant (s7x17 / 一些))
+            :ARG2 (s7x16 / 显得-01
+                              :ARG0 s7x14
+                              :aspect state
+                              :modal-strength full-affirmative
+                              :ARG1 (s7x18 / 多余)))
+        :ARG1 (s7x21 / 创造-01
+            :aspect activity
+            :modal-strength full-affirmative
+            :ARG0 (s7x22 / 技术)
+            :ARG1 (s7x23 / 机会)
+            :affectee (s7x24 / 工人
+                                          :mod (s7x25 / 技能
+                                              :mod (s7x7 / 高)))))
+     :temporal (s7x27 / date-entity
+                    :day 26))
+
+# alignment:
+s7x: 0-0
+s7x1: 2-2
+s7x10: 0-0
+s7x11: 0-0
+s7x12: 0-0
+s7x13: 0-0
+s7x14: 0-0
+s7x16: 0-0
+s7x17: 0-0
+s7x18: 28-28
+s7x19: 25-25
+s7x2: 0-0
+s7x21: 0-0
+s7x22: 0-0
+s7x23: 0-0
+s7x24: 0-0
+s7x25: 0-0
+s7x27: 0-0
+s7x3: 0-0
+s7x4: 0-0
+s7x5: 0-0
+s7x6: 0-0
+s7x7: 16-16
+s7x8: 0-0
+s7x9: 0-0
+
+# document level annotation:
+(s7s0 / sentence
+    :temporal ((document-creation-time :before s7x)
+            (s7x :before s7x21)
+            (s7x21 :after s7x16))
+    :modal ((root :modal author)
+            (author :full-affirmative s7x)
+            (author :full-affirmative s7x3)
+            (author :full-affirmative s7x2)
+            (s7x2 :full-affirmative s7x12)
+            (s7x2 :full-affirmative s7x13)
+            (s7x2 :full-affirmative s7x16)
+            (s7x2 :full-affirmative s7x21)))
+
+
+################################################################################
+# meta-info
+# :: snt8
+Index: 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46
+Words: 全球化 的 作用 有 争议性 ， 有些 传统 上 支持 自由 贸易 的 决策者 现在 开始 怀疑 全球化 给 中 低 收入 美国 家庭 带来 的 福利 到底 有 多 大 ， 尽管 这些 家庭 确实 也 从 更 便宜 的 进口 产品 中 获益 。
+
+# sentence level graph:
+(s8x / and
+     :op2 (s8x2 / contrast-91
+         :aspect state
+         :modal-strength full-affirmative
+         :ARG1 (s8x3 / 获益-01
+                   :aspect performance
+                   :modal-strength full-affirmative
+                   :ARG0 (s8x31 / 家庭
+                       :ARG1-of (s8i / identity-91
+                           :ARG2 s8x19)
+                       :mod (s8x34 / 这些))
+                   :ARG1 (s8x4 / 产品
+                       :mod (s8x8 / 便宜
+                           :degree (s8x35 / 更))
+                       :ARG1-of (s8x5 / 进口-01
+                                        :aspect performance
+                                        :modal-strength full-affirmative))
+                   :mod (s8x9 / 确实))
+         :ARG2 (s8x20 / 开始-01
+             :aspect activity
+             :modal-strength full-affirmative
+             :ARG0 (s8x21 / 决策者
+                                     :quant (s8x22 / 有些)
+                                     :ARG0-of (s8x23 / 支持-01
+                                         :aspect performance
+                                         :modal-strength full-affirmative
+                                         :ARG1 (s8x24 / 贸易
+                                                       :mod (s8x6 / 自由))
+                                         :mod (s8x26 / 传统)))
+             :temporal (s8x27 / 现在)
+             :ARG1 (s8x28 / 怀疑-01
+                 :ARG1 (s8x7 / 有-01
+                     :ARG0 (s8x32 / 福利
+                         :ARG1-of (s8x37 / 带来-01
+                             :aspect performance
+                             :modal-strength full-affirmative
+                             :ARG2 (s8x19 / 家庭
+                                 :mod (s8x11 / 收入
+                                     :mod (s8a / and
+                                         :op2 (s8x12 / 低)
+                                         :op1 (s8x10 / 中)))
+                                 :mod (s8c / country :name (s8n / name :op1 "美国")))
+                             :ARG0 (s8x17 / 全球化)))
+                     :aspect state
+                     :modal-strength neutral-affirmative
+                     :mod (s8x30 / 到底)
+                     :ARG1 (s8x25 / 大
+                         :degree (s8u1 / umr-unknown)))
+                 :modal-strength full-affirmative
+                 :aspect activity
+                 :ARG0 s8x21)))
+     :op1 (s8x33 / 有-01
+         :aspect state
+         :modal-strength full-affirmative
+         :ARG0 (s8x1 / 作用
+             :possessor (s8x29 / 全球化))
+         :ARG1 (s8x36 / 争议性)))
+
+# alignment:
+s8c: 23-23
+s8x: 0-0
+s8x1: 3-3
+s8x10: 20-20,44-44
+s8x11: 22-22
+s8x12: 21-21
+s8x17: 18-18
+s8x19: 24-24
+s8x2: 0-0
+s8x20: 0-0
+s8x21: 0-0
+s8x22: 0-0
+s8x23: 0-0
+s8x24: 0-0
+s8x25: 31-31
+s8x26: 0-0
+s8x27: 0-0
+s8x28: 0-0
+s8x29: 1-1
+s8x3: 0-0
+s8x30: 28-28
+s8x31: 35-35
+s8x32: 27-27
+s8x33: 0-0
+s8x34: 34-34
+s8x35: 39-39
+s8x36: 0-0
+s8x37: 25-25
+s8x4: 0-0
+s8x5: 0-0
+s8x6: 11-11
+s8x7: 29-29
+s8x8: 40-40
+s8x9: 0-0
+
+# document level annotation:
+(s8s0 / sentence
+    :temporal ((document-creation-time :before s8x33)
+            (s8x33 :before s8x23)
+            (s8x23 :after s8x20)
+            (s8x20 :after s8x28)
+            (s8x28 :before s8x37)
+            (s8x37 :before s8x3))
+    :modal ((root :modal author)
+            (author :full-affirmative s8x2)
+            (author :full-affirmative s8x3)
+            (author :full-affirmative s8x5)
+            (author :full-affirmative s8x20)
+            (author :full-affirmative s8x23)
+            (author :full-affirmative s8x37)
+            (author :neutral-affirmative s8x7)
+            (author :full-affirmative s8x28)
+            (author :full-affirmative s8x33)))
+
+
+################################################################################
+# meta-info
+# :: snt9
+Index: 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38
+Words: 曾 担任 布什 政府 战略家 的 马修·道得 认为 ， 虽然 美国人 接受 收入 不 平等 的 现实 ， 不 嫉妒 别人 致富 ， 但 他们 为 自己 和 孩子 失去 经济 机会 感到 愈 深 的 受挫感 。
+
+# sentence level graph:
+(s9x / 认为-01
+    :modal-strength full-affirmative
+    :aspect state
+    :ARG0 (s9x2 / person
+         :ARG0-of (s9x21 / 担任-01
+             :aspect performance
+             :modal-strength full-affirmative
+             :temporal (s9x22 / 曾)
+             :ARG1 (s9x1 / 战略家
+                 :mod (s9g / government-organization :name (s9n / name :op1 "政府")
+                     :mod (s9p / person :name (s9n1 / name :op1 "布什")))))
+         :name (s9x8 / name
+                           :op1 "马修·道得"))
+    :ARG1 (s9x9 / contrast-91
+        :aspect state
+        :modal-strength full-affirmative
+        :ARG2 (s9x10 / 感到-01
+            :aspect state
+            :modal-strength full-affirmative
+            :ARG0 (s9x7 / 他们
+                :ARG1-of (s9i / identity-91
+                    :aspect state
+                    :modal-strength full-affirmative
+                    :ARG2 s9x3))
+            :ARG1 (s9x16 / 受挫感
+                :mod (s9x13 / 深
+                    :degree (s9x14 / 愈)))
+            :cause (s9x19 / 失去-01
+                :modal-strength full-affirmative
+                :aspect performance
+                :ARG1 (s9x18 / 机会
+                    :mod (s9x20 / 经济))
+                :ARG0 (s9a / and
+                    :op2 (s9x17 / 孩子)
+                    :op1 (s9x15 / 自己
+                        :ARG1-of (s9i1 / identity-91
+                            :aspect state
+                            :modal-strength full-affirmative
+                            :ARG2 s9x3)))))
+        :ARG1 (s9x25 / and
+            :op2 (s9x4 / 嫉妒-01
+                :modal-strength full-negative
+                :aspect state
+                :polarity -
+                :ARG1 (s9x5 / 致富-01
+                    :aspect performance
+                    :modal-strength full-affirmative
+                    :ARG0 (s9x6 / 别人))
+                :ARG0 s9x3)
+            :op1 (s9x27 / 接受-01
+                               :aspect state
+                               :modal-strength full-affirmative
+                               :ARG0 (s9x3 / 美国人)
+                               :ARG1 (s9x29 / 现实
+                                               :ARG1-of (s9x30 / identity-91
+                                                            :ARG2 (s9x31 / 平等-01
+                                                                :modal-strength full-negative
+                                                                :aspect state
+                                                                :polarity -
+                                                                :ARG0 (s9x32 / 收入))))))))
+
+# alignment:
+s9g: 4-4
+s9p: 3-3
+s9x: 0-0
+s9x1: 2-2,5-5
+s9x10: 0-0
+s9x13: 35-35
+s9x14: 34-34
+s9x15: 27-27
+s9x16: 0-0
+s9x17: 29-29
+s9x18: 32-32
+s9x19: 0-0
+s9x2: 0-0
+s9x20: 31-31
+s9x21: 2-2
+s9x22: 1-1
+s9x25: 0-0
+s9x27: 0-0
+s9x29: 0-0
+s9x3: 11-11
+s9x30: 0-0
+s9x31: 0-0
+s9x32: 0-0
+s9x4: 20-20
+s9x5: 22-22
+s9x6: 21-21
+s9x7: 25-25
+s9x8: 0-0
+s9x9: 0-0
+
+# document level annotation:
+(s9s0 / sentence
+    :temporal ((document-creation-time :before s9x21)
+            (s9x21 :after s9x)
+            (s9x :overlap s9x27)
+            (s9x27 :after s9x4)
+            (s9x4 :before s9x19)
+            (s9x19 :after s9x10))
+    :modal ((root :modal author)
+            (author :full-affirmative s9x)
+            (author :full-affirmative s9x21)
+            (author :full-affirmative s9x2)
+            (s9x2 :full-affirmative s9x9)
+            (s9x2 :full-affirmative s9x10)
+            (s9x2 :full-affirmative s9x19)
+            (s9x2 :full-negative s9x4)
+            (s9x2 :full-affirmative s9x5)
+            (s9x2 :full-affirmative s9x27)
+            (s9x2 :full-negative s9x31)))
+
+
+################################################################################
+# meta-info
+# :: snt10
+Index: 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19
+Words: 他 指出 ， 民众 感觉 商界 和 富人 受到 政府 优待 ， 使 这 种 受挫感 更加 恶化 。
+
+# sentence level graph:
+(s10x / 指出-01
+    :aspect performance
+    :modal-strength full-affirmative
+    :ARG1 (s10x2 / 使-01
+              :ARG2 (s10x3 / 恶化-01
+                  :aspect performance
+                  :modal-strength full-affirmative
+                  :ARG0 (s10x4 / 受挫感
+                                  :mod (s10x5 / 这)
+                                  :unit (s10x6 / 种))
+                  :degree (s10x7 / 更加))
+              :aspect performance
+              :modal-strength full-affirmative
+              :ARG0 (s10x8 / 感觉-01
+                         :aspect performance
+                         :ARG1 (s10x9 / 受到-01
+                                    :modal-strength full-affirmative
+                                    :aspect activity
+                                    :ARG0 (s10x10 / and
+                                               :op1 (s10x11 / 商界)
+                                               :op2 (s10x12 / 富人))
+                                    :ARG1 (s10x13 / 优待-01
+                                        :modal-strength full-affirmative
+                                        :aspect activity
+                                        :ARG1 s10x10
+                                        :ARG0 (s10x15 / 政府)))
+                         :ARG0 (s10x16 / 民众)
+                         :modal-strength full-affirmative)
+              :ARG1 s10x4)
+    :ARG0 (s10x18 / individual-person
+        :refer-person 3rd
+        :refer-number singular))
+
+# alignment:
+s10x: 0-0
+s10x10: 0-0
+s10x11: 0-0
+s10x12: 0-0
+s10x13: 0-0
+s10x15: 0-0
+s10x16: 0-0
+s10x18: 0-0
+s10x2: 0-0
+s10x3: 0-0
+s10x4: 0-0
+s10x5: 0-0
+s10x6: 0-0
+s10x7: 0-0
+s10x8: 0-0
+s10x9: 0-0
+
+# document level annotation:
+(s10s0 / sentence
+    :temporal ((document-creation-time :before s10x)
+            (s10x :before s10x8)
+            (s10x8 :before s10x9)
+            (s10x9 :before s10x13)
+            (s10x13 :after s10x2)
+            (s10x2 :after s10x3))
+    :modal ((root :modal author)
+            (author :full-affirmative s10x)
+            (s9x2 :full-affirmative s10x2)
+            (s9x2 :full-affirmative s10x9)
+            (s9x2 :full-affirmative s10x13)
+            (s9x2 :full-affirmative s10x8)
+            (s9x2 :full-affirmative s10x3))
+    :coref ((s9x3 :same-entity s10x16)))
+
+
+################################################################################
+# meta-info
+# :: snt11
+Index: 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27
+Words: 最近 在 全球 蔓延 的 “ 占领 华尔街 ” 运动 提出 的 诉求 之一 就 是 99% 的 人 反对 政府 过多 救助 1% 的 富人 。
+
+# sentence level graph:
+(s11x / identity-91
+    :aspect state
+    :modal-strength full-affirmative
+    :ARG1 (s11x2 / 诉求
+         :quant 1
+         :ARG2-of (s11x3 / include-91
+             :aspect state
+             :modal-strength full-affirmative
+             :ARG1 (s11x4 / 诉求
+                 :refer-number plural
+                 :ARG1-of (s11x5 / 提出-01
+                                            :aspect performance
+                                            :modal-strength full-affirmative
+                                            :ARG0 (s11x6 / 运动
+                                                                 :ARG0-of (s11x7 / 蔓延-02
+                                                                     :modal-strength full-affirmative
+                                                                     :aspect activity
+                                                                     :ARG1 (s11x8 / 全球)
+                                                                     :temporal (s11x9 / 最近))
+                                                                 :name (s11x10 / name
+                                                                           :op1 "占领"
+                                                                           :op2 "华尔街"))))))
+    :ARG2 (s11x11 / 反对-01
+         :aspect performance
+         :modal-strength full-affirmative
+         :ARG1 (s11x12 / 救助-01
+             :aspect activity
+             :modal-strength full-affirmative
+             :ARG1 (s11x13 / 富人
+                                   :quant (s11x14 / percentage-entity
+                                              :value 1))
+             :frequency (s11x15 / 过多)
+             :ARG0 (s11x16 / 政府))
+         :ARG0 (s11x18 / 人
+                          :quant (s11x19 / percentage-entity
+                                      :value 99))))
+
+# alignment:
+s11x: 0-0
+s11x10: 0-0
+s11x11: 0-0
+s11x12: 0-0
+s11x13: 0-0
+s11x14: 0-0
+s11x15: 0-0
+s11x16: 0-0
+s11x18: 0-0
+s11x19: 0-0
+s11x2: 0-0
+s11x3: 0-0
+s11x4: 0-0
+s11x5: 0-0
+s11x6: 0-0
+s11x7: 0-0
+s11x8: 0-0
+s11x9: 0-0
+
+# document level annotation:
+(s11s0 / sentence
+    :temporal ((document-creation-time :depends-on s11x7)
+            (s11x7 :overlap s11x5)
+            (s11x5 :overlap s11x11)
+            (s11x11 :before s11x12))
+    :modal ((root :modal author)
+            (author :full-affirmative s11x)
+            (author :full-affirmative s11x3)
+            (author :full-affirmative s11x5)
+            (author :full-affirmative s11x7)
+            (author :full-affirmative s11x11)
+            (author :full-affirmative s11x12))
+    :coref ((s10x15 :same-entity s11x16)
+            (s4x4 :same-entity s11x13)))
+
+
+################################################################################
+# meta-info
+# :: snt12
+Index: 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28
+Words: 上述 报告 还 发现 ， 1979年 最 穷 的 20% 人口 接受 了 50% 的 政府 转移 支付 ， 而 2007年 这 个 比例 下降 到 35% 。
+
+# sentence level graph:
+(s12x / 发现-01
+    :aspect performance
+    :modal-strength full-affirmative
+    :mod (s12x2 / 还)
+    :ARG1 (s12x3 / and
+               :op1 (s12x4 / 接受-01
+                   :temporal (s12d / date-entity
+                       :year 1979)
+                   :modal-strength full-affirmative
+                   :aspect performance
+                   :ARG0 (s12x5 / 人口
+                             :mod (s12x21 / 穷
+                                 :degree (s12x22 / 最))
+                             :quant (s12x9 / percentage-entity
+                                                :value 20))
+                   :ARG1 (s12x10 / 支付-01
+                                    :quant (s12x11 / percentage-entity
+                                                :value 50)
+                                    :modal-strength full-affirmative
+                                    :aspect performance
+                                    :ARG0 (s12x12 / 政府)
+                                    :manner (s12x13 / 转移)))
+               :op2 (s12x14 / 下降-01
+                        :temporal (s12x15 / date-entity
+                                      :year 2007)
+                        :aspect performance
+                        :modal-strength full-affirmative
+                        :ARG1 (s12x16 / percentage-entity
+                                  :value 35)
+                        :ARG0 (s12x17 / 比例
+                                   :mod (s12x18 / 这)
+                                   :unit (s12x19 / 个))))
+    :ARG0 (s12x20 / 报告
+         :mod (s12x1 / 上述)))
+
+# alignment:
+s12x: 0-0
+s12x1: 1-1
+s12x10: 0-0
+s12x11: 0-0
+s12x12: 0-0
+s12x13: 0-0
+s12x14: 0-0
+s12x15: 0-0
+s12x16: 0-0
+s12x17: 0-0
+s12x18: 0-0
+s12x19: 0-0
+s12x2: 0-0
+s12x20: 0-0
+s12x21: 8-8
+s12x22: 7-7
+s12x3: 0-0
+s12x4: 0-0
+s12x5: 0-0
+s12x9: 0-0
+
+# document level annotation:
+(s12s0 / sentence
+    :temporal ((document-creation-time :before s12x)
+            (s12x :before s12x4)
+            (s12x4 :after s12x10)
+            (s12x10 :after s12x14))
+    :modal ((root :modal author)
+            (author :full-affirmative s12x)
+            (s2g :full-affirmative s12x4)
+            (s2g :full-affirmative s12x10)
+            (s2g :full-affirmative s12x14))
+    :coref ((s11x16 :same-entity s12x12)))
+
+

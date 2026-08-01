@@ -1,13 +1,13 @@
-# UMR 2.0 Data Release
+# UMR 3.0 Data Release
 
 ## Table of Contents
-- [UMR 2.0 Data Release](#umr-20-data-release)
-  - [UMR 2.0 Data Parser Tool](#umr-20-data-parser-tool)
+- [UMR 3.0 Data Release](#umr-20-data-release)
+  - [UMR 3.0 Data Parser Tool](#umr-20-data-parser-tool)
     - [Usage](#usage)
     - [Options](#options)
     - [Examples](#examples)
     - [Output Format](#output-format)
-  - [UMR 2.0 Data format Description](#umr-20-data-format-description)
+  - [UMR 3.0 Data format Description](#umr-20-data-format-description)
     - [Block Structure](#block-structure)
     - [Meta Information](#1-meta-information)
     - [Sentence Information](#2-sentence-information)
@@ -17,7 +17,7 @@
     - [Language Coverage](#language-coverage)
   - [Statistics Tables Description](#statistics)
 
-## UMR 2.0 Data Parser Tool
+## UMR 3.0 Data Parser Tool
 
 The `parse_umr_to_json.py` script extracts content from UMR files and converts it to JSON format. It properly handles the block structure of UMR files, where:
 
@@ -98,7 +98,7 @@ The script outputs a JSON file containing an array of UMR documents. Each docume
 }
 ```
 
-## UMR 2.0 Data format Description
+## UMR 3.0 Data format Description
 
 This dataset is organized in **blocks**, each corresponding to a single sentence.  
 Blocks are separated by a line of 80 hash signs:
@@ -171,11 +171,14 @@ This dataset includes annotated data from the following languages:
 - English  
 - Chinese  
 
-#### Newly Added in UMR 2.0 Release
+#### Added in UMR 2.0 Release
 
 - Czech  
 - Latin  
 
+#### Newly Added in UMR 3.0 Release
+
+- Portuguese
 ---
 
 ### Notes

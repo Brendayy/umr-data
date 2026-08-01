@@ -7679,7 +7679,7 @@ chinese/umr_data/manned_craft_Sherly.umr	chinese/umr_data/chinese_umr-0023.umr
 chinese/umr_data/mayun_jingyi.umr	chinese/umr_data/chinese_umr-0024.umr
 chinese/umr_data/tlp_umr_wa_1120.umr	chinese/umr_data/chinese_umr-0025.umr
 chinese/umr_data/xima_jingyi.umr	chinese/umr_data/chinese_umr-0026.umr
-chinese/umr_data/cchina-transgender.umr	chinese/umr_data/chinese_umr-0027.umr
+chinese/umr_data/china-transgender.umr	chinese/umr_data/chinese_umr-0027.umr
 chinese/umr_data/chtb_5193.umr	chinese/umr_data/chinese_umr-0028.umr
 chinese/umr_data/chtb_5228.umr	chinese/umr_data/chinese_umr-0029.umr
 chinese/umr_data/chtb_5243.umr	chinese/umr_data/chinese_umr-0030.umr

@@ -1,0 +1,1366 @@
+################################################################################
+# meta-info
+# :: snt1
+Index: 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26
+Words: 美国 同意 向 朝鲜 提供 24万 吨 营养 食品 ， 朝鲜 则 暂停 核 试验 、 远程 导弹 试射 和 宁边 的 铀 浓缩 活动 。
+
+# sentence level graph:
+(s1a / and
+    :op1 (s1x / 同意-02
+        :ARG0 (s1c / country
+            :name (s1n / name
+                :op1 "美国"))
+        :ARG1 (s1x2 / 提供-01
+            :ARG0 s1c
+            :ARG1 (s1x3 / 食品
+                :quant 240000
+                :unit (s1x4 / 吨)
+                :mod (s1x5 / 营养))
+            :ARG2 (s1c2 / country
+                :name (s1n2 / name
+                    :op1 "朝鲜"))
+            :aspect process
+            :modal-strength partial-affirmative
+            :modal-predicate s1x)
+        :aspect performance
+        :modal-strength full-affirmative)
+    :op2 (s1x6 / 暂停-01
+        :ARG0 s1c2
+        :ARG1 (s1a2 / and
+            :op1 (s1x7 / 试验-01
+                :ARG0 s1c2
+                :mod (s1x8 / 核)
+                :aspect activity
+                :modal-strength undefined)
+            :op2 (s1x9 / 试射-01
+                :ARG0 s1c2
+                :ARG1 (s1x10 / 导弹
+                    :mod (s1x11 / 远程))
+                :aspect activity
+                :modal-strength undefined)
+            :op3 (s1x12 / 浓缩-01
+                :ARG0 s1c2
+                :ARG1 (s1x13 / 铀)
+                :place (s1c3 / country-partition
+                    :name (s1n3 / name
+                        :op1 "宁边"))
+                :aspect activity
+                :modal-strength undefined))
+        :mod (s1x14 / 则)
+        :aspect process
+        :modal-strength full-affirmative))
+
+# alignment:
+s1c: 1-1
+s1c2: 4-11
+s1c3: 21-21
+s1x: 0-0
+s1x10: 0-0
+s1x11: 17-17
+s1x12: 0-0
+s1x13: 0-0
+s1x14: 0-0
+s1x2: 0-0
+s1x3: 0-0
+s1x4: 0-0
+s1x5: 0-0
+s1x6: 0-0
+s1x7: 0-0
+s1x8: 0-0
+s1x9: 0-0
+
+# document level annotation:
+(s1s0 / sentence
+    :temporal ((document-creation-time :before s1x)
+            (s1x :after s1x2)
+            (document-creation-time :after s1x6)
+            (s1x6 :overlap s1x7)
+            (s1x6 :overlap s1x9)
+            (s1x6 :overlap s1x12))
+    :modal ((root :modal author)
+            (author :unspecified s1x7)
+            (author :unspecified s1x9)
+            (author :unspecified s1x12)
+            (author :full-affirmative s1x6)
+            (author :full-affirmative s1c)
+            (s1c :partial-affirmative s1x2)
+            (author :full-affirmative s1x)))
+
+
+################################################################################
+# meta-info
+# :: snt2
+Index: 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35
+Words: 朝鲜 答应 停止 停 核 试验 、 远程 导弹 试射 和 宁边 的 铀 浓缩 活动 ， 美国 则 需要 向 朝鲜 提供 24万 吨 营养 食品 ， 并 不 得 继续 敌视 朝鲜 。
+
+# sentence level graph:
+(s2a / and
+    :op1 (s2x / 答应-01
+        :ARG0 (s2c / country
+            :name (s2n / name
+                :op1 "朝鲜"))
+        :ARG2 (s2x2 / 停止-01
+            :ARG0 s2c
+            :ARG1 (s2a2 / and
+                :op1 (s2x3 / 试验-01
+                    :ARG0 s2c
+                    :mod (s2x4 / 核)
+                    :aspect activity
+                    :modal-strength full-negative
+                    :modal-predicate s2x2)
+                :op2 (s2x5 / 试射-01
+                    :ARG0 s2c
+                    :ARG1 (s2x6 / 导弹
+                        :mod (s2x7 / 远程))
+                    :aspect activity
+                    :modal-strength full-negative
+                    :modal-predicate s2x2)
+                :op3 (s2x8 / 浓缩-01
+                    :ARG0 s2c
+                    :ARG1 (s2x9 / 铀)
+                    :place (s2c2 / county
+                        :name (s2n2 / name
+                            :op1 "宁边"))
+                    :aspect activity
+                    :modal-strength full-negative
+                    :modal-predicate s2x2))
+            :aspect performance
+            :modal-strength partial-affirmative
+            :modal-predicate s2x)
+        :aspect performance
+        :modal-strength full-affirmative)
+    :op2 (s2a3 / and
+        :op1 (s2x10 / 需要-01
+            :ARG0 (s2c3 / country
+                :name (s2n3 / name
+                    :op1 "美国"))
+            :ARG1 (s2x11 / 提供-01
+                :ARG0 s2c3
+                :ARG1 (s2x12 / 食品
+                    :quant 240000
+                    :unit (s2x13 / 吨)
+                    :mod (s2x14 / 营养))
+                :ARG2 s2c
+                :aspect process
+                :modal-strength partial-affirmative
+                :modal-predicate s2x10)
+            :mod (s2x15 / 则)
+            :aspect state
+            :modal-strength full-affirmative)
+        :op2 (s2x16 / 继续-01
+            :ARG0 s2c3
+            :ARG1 (s2x17 / 敌视-01
+                :ARG0 s2c3
+                :ARG1 s2c
+                :aspect state
+                :modal-strength undefined)
+            :polarity -
+            :aspect activity
+            :modal-strength partial-negative)))
+
+# alignment:
+s2c: 1-34
+s2c2: 12-12
+s2c3: 18-18
+s2x: 0-0
+s2x10: 0-0
+s2x11: 23-23
+s2x12: 0-0
+s2x13: 0-0
+s2x14: 0-0
+s2x15: 19-19
+s2x16: 0-0
+s2x17: 33-33
+s2x2: 0-0
+s2x3: 0-0
+s2x4: 0-0
+s2x5: 0-0
+s2x6: 0-0
+s2x7: 0-0
+s2x8: 0-0
+s2x9: 0-0
+
+# document level annotation:
+(s2s0 / sentence
+    :temporal ((document-creation-time :before s2x)
+            (s2x :after s2x2)
+            (s2x :overlap s2x10)
+            (s2x10 :before s2x11)
+            (s2x10 :overlap s2x16)
+            (s2x16 :overlap s2x17)
+            (s2x2 :overlap s2x3)
+            (s2x2 :overlap s2x5)
+            (s2x2 :overlap s2x8))
+    :modal ((root :modal author)
+            (author :unspecified s2x17)
+            (author :partial-negative s2x16)
+            (author :full-affirmative s2c)
+            (author :full-affirmative s2x)
+            (s2c :partial-affirmative s2x2)
+            (author :full-affirmative s2x10)
+            (s2x10 :partial-affirmative s2x11)
+            (s2x2 :full-negative s2x3)
+            (s2x2 :full-negative s2x5)
+            (s2x2 :full-negative s2x8))
+    :coref ((s1c2 :same-entity s2c)
+            (s1c3 :same-entity s2c2)
+            (s1c :same-entity s2c3)
+            (s1x3 :same-entity s2x12)
+            (s1x6 :same-event s2x2)
+            (s1x7 :same-event s2x3)
+            (s1x9 :same-event s2x5)
+            (s1x12 :same-event s2x8)
+            (s1x2 :same-event s2x11)))
+
+
+################################################################################
+# meta-info
+# :: snt3
+Index: 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34
+Words: 所以 朝 美 达成 协议 可 谓 各取所需 ， 朝鲜 得到 了 援助 ， 解除 了 经济 封锁 ， 美国 暂时 获得 了 朝鲜 弃 核 承诺 ， 稳定 了 朝鲜 核 问题 。
+
+# sentence level graph:
+(s3a / and
+    :mod (s3x / 所以)
+    :op1 (s3x2 / 可谓-01
+        :ARG0 (s3x3 / 达成-01
+            :ARG0 (s3a2 / and
+                :op1 (s3c / country
+                    :name (s3n / name
+                        :op1 "朝鲜"))
+                :op2 (s3c2 / country
+                    :name (s3n2 / name
+                        :op1 "美国")))
+            :ARG1 (s3x4 / 协议)
+            :aspect performance
+            :modal-strength full-affirmative)
+        :ARG1 (s3x5 / 各取所需-01
+            :ARG0 s3a2
+            :aspect performance
+            :modal-strength full-affirmative)
+        :aspect state
+        :modal-strength full-affirmative)
+    :op2 (s3a3 / and
+        :op1 (s3a4 / and
+            :op1 (s3x6 / 得到-01
+                :ARG0 s3c
+                :ARG1 (s3x7 / 援助)
+                :aspect performance
+                :modal-strength full-affirmative)
+            :op2 (s3x8 / 解除-01
+                :ARG0 s3c
+                :ARG1 (s3x9 / 封锁-01
+                    :mod (s3x10 / 经济)
+                    :aspect state
+                    :modal-strength full-negative
+                    :modal-predicate s3x8)
+                :aspect performance
+                :modal-strength full-affirmative))
+        :op2 (s3a5 / and
+            :op1 (s3x11 / 获得-01
+                :ARG0 s3c2
+                :ARG1 (s3x12 / 承诺-01
+                    :ARG0 s3c
+                    :ARG1 (s3x13 / 弃-01
+                        :ARG0 s3c
+                        :ARG1 (s3x14 / 核)
+                        :aspect performance
+                        :modal-strength partial-affirmative
+                        :modal-predicate s3x12)
+                    :aspect state
+                    :modal-strength full-affirmative)
+                :temporal (s3x15 / 暂时)
+                :aspect performance
+                :modal-strength full-affirmative)
+            :op2 (s3x16 / 稳定-01
+                :ARG0 s3c2
+                :ARG1 (s3x17 / 问题
+                    :mod s3c
+                    :topic (s3x18 / 核))
+                :aspect performance
+                :modal-strength full-affirmative))))
+
+# alignment:
+s3c: 10-31
+s3c2: 20-20
+s3x: 0-0
+s3x10: 0-0
+s3x11: 0-0
+s3x12: 0-0
+s3x13: 25-25
+s3x14: 0-0
+s3x15: 0-0
+s3x16: 0-0
+s3x17: 33-33
+s3x18: 32-32
+s3x2: 0-0
+s3x3: 0-0
+s3x4: 0-0
+s3x5: 0-0
+s3x6: 0-0
+s3x7: 0-0
+s3x8: 0-0
+s3x9: 0-0
+
+# document level annotation:
+(s3s0 / sentence
+    :temporal ((document-creation-time :overlap s3x2)
+            (document-creation-time :before s3x3)
+            (s3x3 :overlap s3x5)
+            (s3x3 :overlap s3x6)
+            (s3x3 :overlap s3x8)
+            (s3x8 :overlap s3x9)
+            (s3x3 :overlap s3x11)
+            (s3x11 :overlap s3x12)
+            (s3x12 :after s3x13)
+            (s3x15 :overlap s3x11)
+            (s3x3 :overlap s3x16))
+    :modal ((root :modal author)
+            (author :full-affirmative s3x8)
+            (author :full-affirmative s3x3)
+            (author :full-affirmative s3x5)
+            (author :full-affirmative s3x2)
+            (author :full-affirmative s3x6)
+            (author :full-affirmative s3x11)
+            (author :full-affirmative s3x16)
+            (s3x8 :full-negative s3x9)
+            (s3x12 :partial-affirmative s3x13)
+            (author :full-affirmative s3x12))
+    :coref ((s2c :same-entity s3c)
+            (s2c3 :same-entity s3c2)))
+
+
+################################################################################
+# meta-info
+# :: snt4
+Index: 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27
+Words: 中方 愿 与 有关 各 方 共同 努力 ， 继续 推进 六 方 会谈 进程 ， 为 实现 半岛 和 东北亚 地区 长治久安 发挥 建设性 作用 ……
+
+# sentence level graph:
+(s4x / 愿-01
+    :ARG0 (s4c / country
+        :name (s4n / name
+            :op1 "中国"))
+    :ARG1 (s4a / and
+        :op1 (s4x2 / 努力-01
+            :ARG0 s4c
+            :companion (s4x3 / 方
+                :mod (s4x4 / 有关)
+                :mod (s4x5 / 各))
+            :manner (s4x6 / 共同)
+            :aspect activity
+            :modal-predicate s4x)
+        :op2 (s4x7 / 继续-01
+            :ARG0 s4c
+            :ARG1 (s4x8 / 推进-01
+                :ARG0 s4c
+                :ARG1 (s4x9 / 进程
+                    :mod (s4x10 / 会谈-01
+                        :ARG0 (s4x11 / 方
+                            :quant 6)
+                        :aspect activity
+                        :modal-strength undefined))
+                :aspect directed-activity
+                :modal-predicate s4x)
+            :aspect activity
+            :modal-predicate s4x)
+        :op3 (s4x12 / 发挥-01
+            :ARG0 s4c
+            :ARG1 (s4x13 / 作用
+                :mod (s4x14 / 建设性))
+            :purpose (s4x15 / 实现-01
+                :ARG1 (s4x16 / 长治久安-01
+                    :ARG0 (s4a2 / and
+                        :op1 (s4x17 / 半岛)
+                        :op2 (s4w / world-region
+                            :name (s4n2 / name
+                                :op1 "东北亚"
+                                :op2 "地区")))
+                    :aspect state
+                    :modal-strength full-affirmative)
+                :aspect performance
+                :modal-strength full-affirmative)
+            :aspect process
+            :modal-predicate s4x))
+    :aspect state
+    :modal-strength full-affirmative)
+
+# alignment:
+s4w: 21-22
+s4x: 0-0
+s4x10: 0-0
+s4x11: 0-0
+s4x12: 0-0
+s4x13: 0-0
+s4x14: 0-0
+s4x15: 0-0
+s4x16: 0-0
+s4x17: 0-0
+s4x2: 0-0
+s4x3: 0-0
+s4x4: 0-0
+s4x5: 0-0
+s4x6: 0-0
+s4x7: 0-0
+s4x8: 0-0
+s4x9: 0-0
+
+# document level annotation:
+(s4s0 / sentence
+    :modal ((root :modal author)
+            (author :full-affirmative s4c)
+            (author :full-affirmative s4x)
+            (s4c :neutral-affirmative s4x2)
+            (s4c :neutral-affirmative s4x7)
+            (s4c :neutral-affirmative s4x8)
+            (s4c :neutral-affirmative s4x12)
+            (author :unspecified s4x10)))
+
+
+################################################################################
+# meta-info
+# :: snt5
+Index: 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20
+Words: 那么 最 不 高兴 的 或者说 朝 美 关系 缓和 让 其 最 难堪 的 国家 是 谁 呢 ？
+
+# sentence level graph:
+(s5i / identity-91
+    :ARG1 (s5x / 国家
+        :mod (s5o / or
+            :op1 (s5x2 / 高兴-01
+                :ARG0 s5x
+                :degree (s5x3 / 最)
+                :polarity -
+                :aspect state
+                :modal-strength full-negative)
+            :op2 (s5x4 / 让-02
+                :ARG0 (s5x5 / 缓和-01
+                    :ARG1 (s5x6 / 关系
+                        :possessor (s5a / and
+                            :op1 (s5c / country
+                                :name (s5n / name
+                                    :op1 "朝"))
+                            :op2 (s5c2 / country
+                                :name (s5n2 / name
+                                    :op1 "美"))))
+                    :aspect process
+                    :modal-strength full-affirmative)
+                :ARG1 s5x
+                :ARG2 (s5x7 / 难堪-01
+                    :ARG0 s5x
+                    :degree (s5x8 / 最)
+                    :aspect state
+                    :modal-strength full-affirmative)
+                :aspect state
+                :modal-strength full-affirmative)))
+    :ARG2 (s5x10 / 谁)
+    :mod (s5x9 / 那么)
+    :mode interrogative
+    :aspect state
+    :modal-strength neutral-affirmative)
+
+# alignment:
+s5c: 7-7
+s5c2: 8-8
+s5x: 0-0
+s5x10: 0-0
+s5x2: 0-0
+s5x3: 0-0
+s5x4: 0-0
+s5x5: 0-0
+s5x6: 0-0
+s5x7: 0-0
+s5x8: 0-0
+s5x9: 0-0
+
+# document level annotation:
+(s5s0 / sentence
+    :temporal ((document-creation-time :overlap s5i)
+            (s5i :overlap s5x2)
+            (s5i :overlap s5x4)
+            (s5x4 :overlap s5x5)
+            (s5x4 :overlap s5x7))
+    :modal ((root :modal author)
+            (author :full-negative s5x2)
+            (author :full-affirmative s5x5)
+            (author :full-affirmative s5x7)
+            (author :full-affirmative s5x4)
+            (author :neutral-affirmative s5i))
+    :coref ((s3c :same-entity s5c)
+            (s3c2 :same-entity s5c2)))
+
+
+################################################################################
+# meta-info
+# :: snt6
+Index: 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55
+Words: 可 天 算 不 如 人 算 ， 李明博 美 想到 朝鲜 如此 的 强硬 ， 更 没 想到 美国 也 是 一 个 孬种 ， 到 最后 事 不 成 却 把 气 撒到 中国 的 头 上 ， 不断 找 我们 渔民 的 麻烦 ， 可见 李明博 就 是 小人 一 个 。
+
+# sentence level graph:
+(s6a / and
+    :op1 (s6x / 不如-01
+        :mod (s6x2 / 可)
+        :ARG0 (s6x3 / 算-02
+            :ARG0 (s6x4 / 天)
+            :aspect activity
+            :modal-strength full-affirmative)
+        :ARG1 (s6x5 / 算-02
+            :ARG0 (s6x6 / 人)
+            :aspect activity
+            :modal-strength full-affirmative)
+        :aspect state
+        :modal-strength full-affirmative)
+    :op2 (s6h / have-cause-91
+        :ARG1 (s6i3 / identity-91
+            :ARG1 (s6p / person
+                :name (s6n / name
+                    :op1 "李明博"))
+            :ARG2 (s6x25 / 小人
+                :quant 1
+                :unit (s6x26 / 个))
+            :mod (s6x27 / 就)
+            :aspect state
+            :modal-strength full-affirmative)
+        :ARG2 (s6q / consecutive
+            :op1 (s6a2 / and
+                :op1 (s6x7 / 想到-01
+                    :ARG0 s6p
+                    :ARG1 (s6x8 / 强硬-01
+                        :ARG0 (s6c / country
+                            :name (s6n2 / name
+                                :op1 "朝鲜"))
+                        :degree (s6x9 / 如此)
+                        :aspect state
+                        :modal-strength full-affirmative)
+                    :polarity -
+                    :aspect state
+                    :modal-strength full-negative)
+                :op2 (s6x10 / 想到-01
+                    :ARG0 s6p
+                    :ARG1 (s6i / identity-91
+                        :ARG1 (s6c2 / country
+                            :name (s6n3 / name
+                                :op1 "美国"))
+                        :ARG2 (s6x11 / 孬种
+                            :quant 1
+                            :unit (s6x12 / 个))
+                        :mod (s6x13 / 也)
+                        :aspect state
+                        :modal-strength full-affirmative)
+                    :mod (s6x14 / 更)
+                    :polarity -
+                    :aspect state
+                    :modal-strength full-negative))
+            :op2 (s6k / contrast-91
+                :ARG1 (s6x16 / 成-02
+                    :ARG1 (s6x17 / 事)
+                    :polarity -
+                    :aspect performance
+                    :modal-strength full-negative)
+                :ARG2 (s6a3 / and
+                    :op1 (s6x18 / 撒-01
+                        :ARG0 s6p
+                        :ARG1 (s6x19 / 气)
+                        :goal (s6x20 / 头上
+                            :possessor (s6c3 / country
+                                :name (s6n4 / name
+                                    :op1 "中国")))
+                        :aspect performance
+                        :modal-strength full-affirmative)
+                    :op2 (s6x21 / 找-01
+                        :ARG0 s6p
+                        :ARG1 (s6x22 / 麻烦
+                            :possessor (s6x23 / 渔民
+                                :ARG1-of (s6i2 / include-91
+                                    :ARG2 (s6p2 / person
+                                        :refer-person 1st
+                                        :refer-number plural))))
+                        :frequency (s6x24 / 不断)
+                        :aspect activity
+                        :modal-strength full-affirmative))
+                :temporal (s6x15 / 最后)
+                :aspect state
+                :modal-strength full-affirmative))
+        :aspect state
+        :modal-strength full-affirmative))
+
+# alignment:
+s6c: 12-12
+s6c2: 20-20
+s6c3: 36-36
+s6p: 9-49
+s6x: 0-0
+s6x10: 0-0
+s6x11: 0-0
+s6x12: 0-0
+s6x13: 0-0
+s6x14: 0-0
+s6x15: 0-0
+s6x16: 0-0
+s6x17: 0-0
+s6x18: 35-35
+s6x19: 0-0
+s6x2: 0-0
+s6x20: 0-0
+s6x21: 0-0
+s6x22: 0-0
+s6x23: 0-0
+s6x24: 0-0
+s6x25: 0-0
+s6x26: 0-0
+s6x27: 0-0
+s6x3: 0-0
+s6x4: 0-0
+s6x5: 0-0
+s6x6: 0-0
+s6x7: 0-0
+s6x8: 0-0
+s6x9: 0-0
+
+# document level annotation:
+(s6s0 / sentence
+    :temporal ((document-creation-time :overlap s6x)
+            (s6x :overlap s6x3)
+            (s6x :overlap s6x5)
+            (document-creation-time :before s6x7)
+            (s6x7 :overlap s6x8)
+            (s6x7 :overlap s6x10)
+            (s6x10 :overlap s6i)
+            (s6x15 :contained s6k)
+            (s6x15 :contained s6x16)
+            (s6x15 :contained s6x18)
+            (s6x15 :contained s6x21)
+            (s6x16 :after s6x18)
+            (s6x18 :overlap s6x21)
+            (s6x10 :after s6x16)
+            (s6x21 :overlap s6i2)
+            (document-creation-time :overlap s6h)
+            (s6h :overlap s6i3)
+            (past-reference :depends-on s6x15))
+    :modal ((root :modal author)
+            (author :full-affirmative s6x3)
+            (author :full-affirmative s6x5)
+            (author :full-affirmative s6x)
+            (author :full-affirmative s6i3)
+            (author :full-affirmative s6x8)
+            (author :full-negative s6x7)
+            (author :full-affirmative s6i)
+            (author :full-negative s6x10)
+            (author :full-negative s6x16)
+            (author :full-affirmative s6x18)
+            (author :full-affirmative s6x21)
+            (author :full-affirmative s6k)
+            (author :full-affirmative s6h))
+    :coref ((s5c :same-entity s6c)
+            (s5c2 :same-entity s6c2)
+            (s4c :same-entity s6c3)))
+
+
+################################################################################
+# meta-info
+# :: snt7
+Index: 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19
+Words: 作为 大 国 ， 中国 的 胸襟 宽厚 ， 韩国 的 小 聪明 让 它 自己 玩去 吧 。
+
+# sentence level graph:
+(s7a / and
+    :op1 (s7x / 宽厚-00
+        :ARG0 (s7x2 / 胸襟
+            :possessor (s7c1 / country
+                :name (s7n1 / name
+                    :op1 "中国")
+                :ARG0-of (s7x3 / 作为-02
+                    :ARG1 (s7x4 / 国
+                        :mod (s7x5 / 大))
+                    :aspect state
+                    :modal-strength full-affirmative)))
+        :aspect state
+        :modal-strength full-affirmative)
+    :op2 (s7x6 / 让-02
+        :ARG1 (s7c2 / country
+            :name (s7n2 / name
+                :op1 "韩国"))
+        :ARG2 (s7x7 / 玩去-01
+            :ARG0 s7c2
+            :ARG1 (s7x8 / 聪明
+                :mod (s7x9 / 小)
+                :possessor s7c2)
+            :manner (s7x10 / 自己)
+            :aspect activity
+            :modal-predicate s7x6)
+        :mode imperative
+        :aspect state
+        :modal-strength partial-affirmative))
+
+# alignment:
+s7c1: 5-5
+s7c2: 10-10
+s7x: 0-0
+s7x10: 0-0
+s7x2: 0-0
+s7x3: 0-0
+s7x4: 0-0
+s7x5: 0-0
+s7x6: 0-0
+s7x7: 0-0
+s7x8: 13-13
+s7x9: 0-0
+
+# document level annotation:
+(s7s0 / sentence
+    :temporal ((document-creation-time :overlap s7x3)
+            (s7x3 :overlap s7x)
+            (document-creation-time :overlap s7x6)
+            (s7x6 :after s7x7))
+    :modal ((root :modal author)
+            (author :full-affirmative s7x3)
+            (author :full-affirmative s7x)
+            (author :partial-affirmative s7x6)
+            (author :neutral-affirmative s7x7))
+    :coref ((s6c3 :same-entity s7c1)))
+
+
+################################################################################
+# meta-info
+# :: snt8
+Index: 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21
+Words: 三胖 顶住 压力 坐稳 江山 后 ， 又 是 他们 开始 讹诈 中国 ， 敲打 美国 和 韩国 时候 了 。
+
+# sentence level graph:
+(s8i / identity-91
+    :ARG2 (s8x4 / 时候
+        :temporal-of (s8x / 开始-01
+            :ARG0 (s8p2 / person
+                :refer-person 3rd
+                :refer-number plural)
+            :ARG1 (s8a / and
+                :op1 (s8x2 / 讹诈-01
+                    :ARG0 s8p2
+                    :ARG1 (s8c1 / country
+                        :name (s8n1 / name
+                            :op1 "中国"))
+                    :aspect activity
+                    :modal-strength full-affirmative)
+                :op2 (s8x3 / 敲打-01
+                    :ARG0 s8p2
+                    :ARG1 (s8a2 / and
+                        :op1 (s8c2 / country
+                            :name (s8n2 / name
+                                :op1 "美国"))
+                        :op2 (s8c3 / country
+                            :name (s8n3 / name
+                                :op1 "韩国")))
+                    :aspect activity
+                    :modal-strength full-affirmative))
+            :aspect performance
+            :modal-strength full-affirmative))
+    :mod (s8x5 / 又)
+    :temporal (s8x6 / 后
+        :op1 (s8a3 / and
+            :op1 (s8x7 / 顶住-01
+                :ARG0 (s8p1 / person
+                    :name (s8n4 / name
+                        :op1 "三胖"))
+                :ARG1 (s8x8 / 压力)
+                :aspect performance
+                :modal-strength full-affirmative)
+            :op2 (s8x9 / 坐稳-00
+                :ARG0 s8p1
+                :ARG1 (s8x10 / 江山)
+                :aspect state
+                :modal-strength full-affirmative)))
+    :aspect state
+    :modal-strength full-affirmative)
+
+# alignment:
+s8c1: 13-13
+s8c2: 16-16
+s8c3: 18-18
+s8p1: 1-1
+s8x: 0-0
+s8x10: 0-0
+s8x2: 0-0
+s8x3: 0-0
+s8x4: 0-0
+s8x5: 0-0
+s8x6: 0-0
+s8x7: 0-0
+s8x8: 0-0
+s8x9: 0-0
+
+# document level annotation:
+(s8s0 / sentence
+    :temporal ((document-creation-time :overlap s8i)
+            (s8i :overlap s8x4)
+            (s8x :overlap s8x2)
+            (s8x :overlap s8x3)
+            (s8x4 :contained s8x)
+            (s8x6 :contained s8x4)
+            (s8x7 :after s8x6)
+            (s8x6 :overlap s8x9))
+    :modal ((root :modal author)
+            (author :full-affirmative s8x2)
+            (author :full-affirmative s8x3)
+            (author :full-affirmative s8x)
+            (author :full-affirmative s8x7)
+            (author :full-affirmative s8x9)
+            (author :full-affirmative s8i))
+    :coref ((s7c1 :same-entity s8c1)
+            (s5c2 :same-entity s8c2)
+            (s7c2 :same-entity s8c3)
+            (s6c :same-entity s8p2)))
+
+
+################################################################################
+# meta-info
+# :: snt9
+Index: 1 2 3 4 5 6 7 8 9 10 11 12 13
+Words: 美国人 这 一 点 也 知道 ， 只是 他们 打 自己 算盘 。
+
+# sentence level graph:
+(s9c1 / contrast-91
+    :ARG1 (s9x / 知道-01
+        :ARG0 (s9x2 / 人
+            :mod (s9c2 / country
+                :name (s9n / name
+                    :op1 "美国"))
+            :refer-number plural)
+        :ARG1 (s9x3 / 点
+            :mod (s9x4 / 这)
+            :quant 1)
+        :mod (s9x5 / 也)
+        :aspect state
+        :modal-strength full-affirmative)
+    :ARG2 (s9x6 / 打-03
+        :ARG0 s9x2
+        :ARG1 (s9x7 / 算盘
+            :possessor s9x2)
+        :aspect activity
+        :modal-strength full-affirmative)
+    :mod (s9x8 / 只是))
+
+# alignment:
+s9x: 0-0
+s9x2: 0-0
+s9x3: 0-0
+s9x4: 0-0
+s9x5: 0-0
+s9x6: 0-0
+s9x7: 0-0
+s9x8: 0-0
+
+# document level annotation:
+(s9s0 / sentence
+    :temporal ((document-creation-time :overlap s9x)
+            (document-creation-time :overlap s9x6))
+    :modal ((root :modal author)
+            (author :full-affirmative s9x)
+            (author :full-affirmative s9x6))
+    :coref ((s8i :same-entity s9x3)))
+
+
+################################################################################
+# meta-info
+# :: snt10
+Index: 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50
+Words: 那 造好 的 核武器 放 仓库 里 封存 怎么办 ？ 拆除 还是 销毁 ？ 暂停 研发 那 核 设施 都 可以 销毁 后 需要 时候 又 “ 神速 ” 造出 核 装置 ？ （ 炸 了 一 个 屁 烟筒 给 全 世界 看 ， 后来 又 怎么样 ？ ）
+
+# sentence level graph:
+(s10a0 / multi-sentence
+    :op1 (s10h2 / have-condition-91
+        :ARG1 (s10x / 办-01
+            :manner (s10u / umr-unknown)
+            :mode interrogative
+            :aspect activity
+            :modal-strength full-affirmative)
+        :ARG2 (s10x2 / 放-01
+            :ARG1 (s10x3 / 核武器
+                :ARG1-of (s10x4 / 造好-00
+                    :ARG1 s10x3
+                    :aspect performance
+                    :modal-strength full-affirmative))
+            :ARG2 (s10x5 / 仓库)
+            :purpose (s10x6 / 封存-01
+                :ARG1 s10x3
+                :aspect performance
+                :modal-strength neutral-affirmative)
+            :aspect performance
+            :modal-strength full-affirmative)
+        :aspect state
+        :modal-strength neutral-affirmative)
+    :op2 (s10o / or
+        :op1 (s10x9 / 拆除-01
+            :ARG1 s10x3
+            :aspect performance
+            :modal-strength neutral-affirmative)
+        :op2 (s10x10 / 销毁-01
+            :ARG1 s10x3
+            :aspect performance
+            :modal-strength neutral-affirmative)
+        :mode interrogative)
+    :op3 (s10h / have-condition-91
+        :ARG2 (s10x11 / 暂停-01
+            :ARG1 (s10x12 / 研发-01
+                :aspect activity
+                :modal-predicate s10x11)
+            :aspect performance
+            :modal-strength full-affirmative)
+        :ARG1 (s10x13 / 可以-01
+            :ARG0 (s10a1 / and
+                :op1 (s10x14 / 销毁-01
+                    :ARG1 (s10x15 / 设施
+                        :mod (s10x16 / 核))
+                    :aspect performance
+                    :modal-predicate s10x13)
+                :op2 (s10x17 / 造出-01
+                    :ARG1 (s10x18 / 装置
+                        :mod (s10x19 / 核))
+                    :manner (s10x20 / 神速)
+                    :mod (s10x21 / 又)
+                    :temporal (s10x22 / 后
+                        :op1 s10x14)
+                    :temporal (s10x23 / 时候
+                        :mod (s10x24 / 需要-01
+                            :aspect state
+                            :modal-strength neutral-affirmative))
+                    :aspect performance
+                    :modal-predicate s10x13))
+            :mod (s10x25 / 都)
+            :aspect state
+            :modal-strength full-affirmative)
+        :mode interrogative
+        :aspect state
+        :modal-strength neutral-affirmative)
+    :op4 (s10a2 / and
+        :op1 (s10x26 / 炸-01
+            :ARG1 (s10x27 / 烟筒
+                :quant 1
+                :unit (s10x28 / 个)
+                :mod (s10x29 / 屁))
+            :purpose (s10x30 / 看-02
+                :ARG0 (s10x31 / 世界
+                    :mod (s10x32 / 全))
+                :ARG1 s10x26
+                :aspect activity
+                :modal-strength full-affirmative)
+            :aspect performance
+            :modal-strength full-affirmative)
+        :op2 (s10x33 / 怎么样
+            :temporal (s10x34 / 后来)
+            :mod (s10x35 / 又)
+            :mode interrogative
+            :aspect state
+            :modal-strength neutral-affirmative)))
+
+# alignment:
+
+# document level annotation:
+(s10s0 / sentence
+    :temporal ((document-creation-time :overlap s10x)
+            (document-creation-time :before s10x4)
+            (s10x4 :after s10x2)
+            (document-creation-time :overlap s10h)
+            (s10x14 :after s10x22)
+            (s10x23 :contained s10x17)
+            (s10x23 :overlap s10x24)
+            (document-creation-time :before s10x26)
+            (s10x26 :overlap s10x30)
+            (s10x26 :after s10x34))
+    :modal ((root :modal author)
+            (author :full-affirmative s10x26)
+            (author :full-affirmative s10x4)
+            (author :neutral-affirmative s10x9)
+            (author :neutral-affirmative s10x10)
+            (author :neutral-affirmative s10h)
+            (author :neutral-affirmative s10x33)
+            (author :neutral-affirmative s10x6)
+            (s10h :full-affirmative s10x11)
+            (s10x11 :full-negative s10x12)
+            (s10h :full-affirmative s10x13)
+            (s10x13 :neutral-affirmative s10x14)
+            (s10x13 :neutral-affirmative s10x17)
+            (author :neutral-affirmative s10x24)
+            (s10h :neutral-affirmative s10x14)
+            (s10h :neutral-affirmative s10x17)
+            (author :neutral-affirmative s10h2)
+            (s10h2 :full-affirmative s10x)
+            (s10h2 :full-affirmative s10x2)))
+
+
+################################################################################
+# meta-info
+# :: snt11
+Index: 1 2 3 4 5 6 7 8 9 10 11 12
+Words: 因为 彼此 心知肚明 ， 所以 才 会谈 如此 神速 进展 一拍即合 。
+
+# sentence level graph:
+(s11h / have-cause-91
+    :ARG1 (s11a / and
+        :op1 (s11x / 进展-01
+            :ARG0 (s11x2 / 会谈)
+            :manner (s11x3 / 神速
+                :degree (s11x4 / 如此))
+            :aspect process
+            :modal-strength full-affirmative)
+        :op2 (s11x5 / 一拍即合-00
+            :ARG0 (s11x6 / 彼此)
+            :aspect performance
+            :modal-strength full-affirmative)
+        :mod (s11x7 / 才))
+    :ARG2 (s11x8 / 心知肚明-01
+        :ARG0 s11x6
+        :aspect state
+        :modal-strength full-affirmative)
+    :aspect state
+    :modal-strength full-affirmative)
+
+# alignment:
+s11x: 0-0
+s11x2: 0-0
+s11x3: 0-0
+s11x4: 0-0
+s11x5: 0-0
+s11x6: 0-0
+s11x7: 0-0
+s11x8: 0-0
+
+# document level annotation:
+(s11s0 / sentence
+    :temporal ((document-creation-time :overlap s11h)
+            (s11h :overlap s11x8)
+            (s11h :overlap s11x)
+            (s11h :overlap s11x5))
+    :modal ((root :modal author)
+            (author :full-affirmative s11x)
+            (author :full-affirmative s11x5)
+            (author :full-affirmative s11x8)
+            (author :full-affirmative s11h)))
+
+
+################################################################################
+# meta-info
+# :: snt12
+Index: 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24
+Words: 如果 中国 的 某些 人 对 朝鲜 自己 都 没有 信心 ， 那 还 能 对 周边 的 国家 有 多少 抱有 信心 ？
+
+# sentence level graph:
+(s12h / have-condition-91
+    :ARG2 (s12x / 有-01
+        :ARG0 (s12x2 / 人
+            :mod (s12c1 / country
+                :name (s12n1 / name
+                    :op1 "中国"))
+            :mod (s12x3 / 某些))
+        :ARG1 (s12x4 / 信心)
+        :topic (s12c2 / country
+            :name (s12n2 / name
+                :op1 "朝鲜"))
+        :mod (s12x5 / 自己)
+        :mod (s12x6 / 都)
+        :polarity -
+        :aspect state
+        :modal-strength full-negative)
+    :ARG1 (s12x7 / 能-01
+        :ARG0 (s12x8 / 抱有-01
+            :ARG0 s12x2
+            :ARG1 (s12x9 / 信心)
+            :topic (s12x10 / 国家
+                :mod (s12x11 / 周边)
+                :quant (s12x12 / 多少))
+            :aspect state
+            :modal-predicate s12x7)
+        :mod (s12x13 / 还)
+        :mode interrogative
+        :aspect state
+        :modal-strength full-affirmative)
+    :aspect state
+    :modal-strength neutral-affirmative)
+
+# alignment:
+s12c1: 2-2
+s12c2: 7-7
+s12x: 0-0
+s12x10: 0-0
+s12x11: 0-0
+s12x12: 0-0
+s12x13: 14-14
+s12x2: 0-0
+s12x3: 0-0
+s12x4: 0-0
+s12x5: 0-0
+s12x6: 0-0
+s12x7: 0-0
+s12x8: 0-0
+s12x9: 0-0
+
+# document level annotation:
+(s12s0 / sentence
+    :temporal ((document-creation-time :overlap s12h)
+            (s12h :overlap s12x)
+            (s12h :overlap s12x7)
+            (s12x7 :overlap s12x8))
+    :modal ((root :modal author)
+            (author :neutral-affirmative s12h)
+            (s12h :full-negative s12x)
+            (s12h :full-affirmative s12x7)
+            (author :neutral-affirmative s12x8))
+    :coref ((s8c1 :same-entity s12c1)
+            (s6c :same-entity s12c2)))
+
+
+################################################################################
+# meta-info
+# :: snt13
+Index: 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24
+Words: 事实上 ， 朝鲜 在 自己 的 国家 安全 与 民族 安全 得到 确实 的 保障 之前 ， 是 不 可能 弃 核 的 。
+
+# sentence level graph:
+(s13x / 弃-01
+    :ARG0 (s13c / country
+        :name (s13n / name
+            :op1 "朝鲜"))
+    :ARG1 (s13x2 / 核)
+    :temporal (s13x3 / 之前
+        :op1 (s13x4 / 得到-01
+            :ARG0 (s13a / and
+                :op1 (s13x5 / 安全
+                    :mod (s13x6 / 国家)
+                    :possessor s13c)
+                :op2 (s13x7 / 安全
+                    :mod (s13x8 / 民族)
+                    :possessor s13c))
+            :ARG1 (s13x9 / 保障
+                :mod (s13x10 / 确实))
+            :aspect performance
+            :modal-strength neutral-affirmative))
+    :mod (s13x11 / 事实上)
+    :polarity -
+    :aspect performance
+    :modal-strength full-negative)
+
+# alignment:
+s13c: 3-3
+s13x: 0-0
+s13x10: 0-0
+s13x11: 0-0
+s13x2: 0-0
+s13x3: 0-0
+s13x4: 0-0
+s13x5: 0-0
+s13x6: 0-0
+s13x7: 11-11
+s13x8: 0-0
+s13x9: 0-0
+
+# document level annotation:
+(s13s0 / sentence
+    :temporal ((document-creation-time :overlap s13x)
+            (s13x3 :contained s13x)
+            (s13x4 :before s13x3))
+    :modal ((root :modal author)
+            (author :neutral-affirmative s13x4)
+            (author :full-negative s13x))
+    :coref ((s12c2 :same-entity s13c)))
+
+
+################################################################################
+# meta-info
+# :: snt14
+Index: 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31
+Words: 韩国 的 李明博 政府 从来 没有 提出 过 将 美军 驱逐 出 朝鲜 半岛 的 时间表 ， 又 怎么 可能 有 “ 雄心勃勃 ， 统一 朝鲜 半岛 的 大志 ” ？
+
+# sentence level graph:
+(s14h / have-cause-91
+    :ARG1 (s14x / 有-01
+        :ARG0 (s14g / government-organization
+            :name (s14n / name
+                :op1 "李明博"
+                :op2 "政府")
+            :possessor (s14c1 / country
+                :name (s14n2 / name
+                    :op1 "韩国")))
+        :ARG1 (s14x2 / 大志
+            :mod (s14x3 / 雄心勃勃)
+            :topic (s14x4 / 统一-01
+                :ARG0 s14g
+                :ARG1 (s14w / world-region
+                    :name (s14n3 / name
+                        :op1 "朝鲜"
+                        :op2 "半岛"))
+                :aspect performance
+                :modal-strength undefined))
+        :mod (s14x5 / 又)
+        :mod (s14x6 / 怎么)
+        :mode interrogative
+        :aspect state
+        :modal-strength partial-negative)
+    :ARG2 (s14x7 / 提出-01
+        :ARG0 s14g
+        :ARG1 (s14x8 / 时间表
+            :topic (s14x9 / 驱逐-02
+                :ARG1 (s14a / armed-organization
+                    :name (s14n4 / name
+                        :op1 "美军"))
+                :ARG2 s14w
+                :aspect performance
+                :modal-strength undefined))
+        :temporal (s14x10 / 从来)
+        :polarity -
+        :aspect performance
+        :modal-strength full-negative)
+    :aspect state
+    :modal-strength full-affirmative)
+
+# alignment:
+s14a: 10-10
+s14c1: 1-1
+s14g: 3-4
+s14w: 13-26
+s14x: 0-0
+s14x10: 0-0
+s14x2: 0-0
+s14x3: 0-0
+s14x4: 0-0
+s14x5: 0-0
+s14x6: 0-0
+s14x7: 0-0
+s14x8: 0-0
+s14x9: 0-0
+
+# document level annotation:
+(s14s0 / sentence
+    :temporal ((document-creation-time :overlap s14h)
+            (document-creation-time :overlap s14x)
+            (s14x10 :contained s14x7)
+            (past-reference :depends-on s14x10))
+    :modal ((root :modal author)
+            (author :unspecified s14x4)
+            (author :partial-negative s14x)
+            (author :unspecified s14x9)
+            (author :full-negative s14x7)
+            (author :full-affirmative s14h))
+    :coref ((s7c2 :same-entity s14c1)
+            (s1a :same-entity s14a)))
+
+
+################################################################################
+# meta-info
+# :: snt15
+Index: 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41
+Words: 但是 中国 那 吃 它 那 一 套 ， 如果 惹 的 我们 不 高兴 ， 中国 收拾 韩国 有的是 办法 ， 作为 大 国 ， 中国 的 胸襟 宽厚 ， 韩国 的 小 聪明 让 它 自己 玩去 吧 。
+
+# sentence level graph:
+(s15a / and
+    :op1 (s15x / 吃-05
+        :ARG0 (s15c1 / country
+            :name (s15n1 / name
+                :op1 "中国"))
+        :ARG1 (s15x2 / 套
+            :quant 1
+            :mod (s15x3 / 那)
+            :possessor (s15c2 / country
+                :name (s15n2 / name
+                    :op1 "韩国")))
+        :mod (s15x4 / 哪)
+        :mod (s15x5 / 但是)
+        :mode interrogative
+        :aspect activity
+        :modal-strength full-negative)
+    :op2 (s15h / have-condition-91
+        :ARG2 (s15x6 / 惹-01
+            :ARG0 s15c2
+            :ARG1 (s15p / person
+                :refer-person 1st
+                :refer-number plural)
+            :ARG2 (s15x7 / 高兴-01
+                :ARG0 s15p
+                :polarity -
+                :aspect state
+                :modal-strength neutral-negative)
+            :aspect performance
+            :modal-strength full-affirmative)
+        :ARG1 (s15x8 / 有的是-00
+            :ARG0 s15c1
+            :ARG1 (s15x9 / 办法
+                :purpose (s15x10 / 收拾-01
+                    :ARG0 s15c1
+                    :ARG1 s15c2
+                    :aspect performance
+                    :modal-strength undefined))
+            :aspect state
+            :modal-strength full-affirmative)
+        :aspect state
+        :modal-strength neutral-affirmative)
+    :op3 (s15x11 / 宽厚-00
+        :ARG0 (s15x12 / 胸襟
+            :possessor s15c1
+            :ARG0-of (s15x13 / 作为-02
+                :ARG1 (s15x14 / 国
+                    :mod (s15x15 / 大))
+                :aspect state
+                :modal-strength full-affirmative))
+        :aspect state
+        :modal-strength full-affirmative)
+    :op4 (s15x16 / 让-02
+        :ARG1 s15c2
+        :ARG2 (s15x17 / 玩去-01
+            :ARG0 s15c2
+            :ARG1 (s15x18 / 聪明
+                :mod (s15x19 / 小)
+                :possessor s15c2)
+            :manner (s15x20 / 自己)
+            :aspect activity
+            :modal-predicate s15x16)
+        :mode imperative
+        :aspect state
+        :modal-strength partial-affirmative))
+
+# alignment:
+s15c1: 2-27
+s15c2: 19-32
+s15x: 0-0
+s15x10: 0-0
+s15x11: 0-0
+s15x12: 29-29
+s15x13: 0-0
+s15x14: 0-0
+s15x15: 0-0
+s15x16: 0-0
+s15x17: 0-0
+s15x18: 35-35
+s15x19: 0-0
+s15x2: 0-0
+s15x20: 0-0
+s15x3: 0-0
+s15x4: 0-0
+s15x5: 0-0
+s15x6: 0-0
+s15x7: 0-0
+s15x8: 0-0
+s15x9: 0-0
+
+# document level annotation:
+(s15s0 / sentence
+    :temporal ((document-creation-time :overlap s15x)
+            (document-creation-time :overlap s15h)
+            (s15h :overlap s15x6)
+            (s15h :overlap s15x8)
+            (document-creation-time :overlap s15x13)
+            (document-creation-time :overlap s15x11)
+            (document-creation-time :overlap s15x16)
+            (s15x16 :after s15x17))
+    :modal ((root :modal author)
+            (author :full-negative s15x)
+            (author :neutral-negative s15x7)
+            (author :neutral-affirmative s15h)
+            (author :full-affirmative s15x13)
+            (author :full-affirmative s15x11)
+            (s15h :full-affirmative s15x6)
+            (s15h :full-affirmative s15x8)
+            (author :partial-affirmative s15x16)
+            (author :neutral-affirmative s15x17))
+    :coref ((s12c1 :same-entity s15c1)
+            (s14c1 :same-entity s15c2)))
+
+
+################################################################################

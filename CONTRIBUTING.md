@@ -1,6 +1,6 @@
-# Contributing to UMR 2.0 Data
+# Contributing to UMR 3.0 Data
 
-Thank you for your interest in improving the UMR 2.0 dataset! We welcome contributions from the community to help identify and fix errors in the annotations.
+Thank you for your interest in improving the UMR 3.0 dataset! We welcome contributions from the community to help identify and fix errors in the annotations.
 
 ## How to Report Errors
 

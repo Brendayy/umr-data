@@ -1,0 +1,869 @@
+################################################################################
+# meta-info
+# :: snt1
+Index: 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29
+Words: 在 刚刚 结束 的 十一 届 全国 人大 四 次 会议 上 ， 温家宝 总理 语重心长 的 说 ： “ 当前 最 大 的 危险 在于 腐败 。 ”
+
+# sentence level graph:
+(s1x / 说-01
+     :ARG0 (s1p / person
+        :ARG0-of (s1h / have-role-91
+            :ARG1 (s1x1 / 总理))
+        :name (s1n / name
+            :op1 "温家宝"))
+     :mod (s1x13 / 语重心长-01
+         :aspect state
+         :modal-strength neutral-affirmative)
+     :place (s1x2 / conference
+                :ARG1-of (s1x3 / 结束-01
+                              :aspect performance
+                              :temporal (s1x4 / 刚刚)
+                              :modal-strength neutral-affirmative)
+                :name (s1x5 / name
+                          :op4 "人大"
+                          :op3 "全国"
+                          :op2 "届"
+                          :op1 "十一"
+                          :op7 "会议"
+                          :op6 "次"
+                          :op5 "四"))
+     :modal-strength neutral-affirmative
+     :ARG1 (s1x6 / 在于-01
+               :ARG1 (s1x7 / 腐败)
+               :ARG0 (s1x8 / 危险
+                         :temporal (s1x9 / 当前)
+                         :ARG0-of (s1x10 / 大-01
+                                      :aspect reversible-state
+                                      :modal-strength neutral-affirmative
+                                      :degree (s1x11 / 最)))
+               :aspect process
+               :modal-strength neutral-affirmative)
+     :aspect performance)
+
+# alignment:
+s1p: 15-15
+s1x: 0-0
+s1x1: 15-15
+s1x10: 0-0
+s1x11: 0-0
+s1x13: 0-0
+s1x2: 0-0
+s1x3: 0-0
+s1x4: 0-0
+s1x5: 0-0
+s1x6: 0-0
+s1x7: 0-0
+s1x8: 0-0
+s1x9: 0-0
+
+# document level annotation:
+(s1s0 / sentence
+    :temporal ((document-creation-time :before s1x4)
+            (document-creation-time :overlap s1x9))
+    :modal ((author :neutral-affirmative s1x13)
+            (author :neutral-affirmative s1x3)
+            (author :neutral-affirmative s1x)
+            (author :neutral-affirmative s1x10)
+            (author :neutral-affirmative s1x6)))
+
+
+################################################################################
+# meta-info
+# :: snt2
+Index: 1 2 3 4 5 6 7 8 9 10 11 12
+Words: 想之 此 话 已 不 是 第一 次 在 耳边 响起 ，
+
+# sentence level graph:
+(s2x / 想-01
+    :ARG1 (s2x2 / 响起-01
+              :polarity -
+              :ord (s2x3 / ordinal-entity
+                       :unit (s2x4 / 次)
+                       :value 1)
+              :place (s2x5 / 耳边)
+              :ARG0 (s2x6 / 话
+                        :mod (s2x7 / 此))
+              :aspect state
+              :modal-strength neutral-affirmative)
+    :aspect performance
+    :modal-strength neutral-affirmative)
+
+# alignment:
+s2x: 0-0
+s2x2: 0-0
+s2x3: 0-0
+s2x4: 0-0
+s2x5: 0-0
+s2x6: 0-0
+s2x7: 0-0
+
+# document level annotation:
+(s2s0 / sentence
+    :modal ((author :neutral-affirmative s2x2)
+            (author :neutral-affirmative s2x)))
+
+
+################################################################################
+# meta-info
+# :: snt3
+Index: 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22
+Words: 记得 2010年 10月 ， 著名 经济学家 吴敬琏 也 曾 大声 疾呼 ： 腐败 已 成为 中国 当前 最 大 的 问题 。
+
+# sentence level graph:
+(s3x / 记得-01
+     :ARG1 (s3x3 / 疾呼-01
+               :temporal (s3x2 / date-entity
+                   :year 2010
+                   :month 10)
+               :mod (s3x4 / 也)
+               :ARG0 (s3x5 / person
+                         :ARG1-of (s3x6 / identity-91
+                                      :ARG2 (s3x7 / 经济学家
+                                                 :ARG0-of (s3x8 / 著名-01
+                                                               :modal-strength neutral-affirmative
+                                                               :aspect irreversible-state)))
+                         :name (s3x9 / name
+                                    :op1 "吴敬琏"))
+               :temporal (s3x10 / 曾)
+               :aspect performance
+               :modal-strength neutral-affirmative
+               :manner (s3x11 / 大声)
+               :ARG1 (s3x12 / 成为-01
+                         :ARG0 (s3x13 / 腐败-01
+                             :aspect activity
+                             :modal-strength neutral-affirmative)
+                         :ARG1 (s3x14 / 问题
+                                   :poss (s3x15 / country
+                                              :name (s3x16 / name
+                                                         :op1 "中国"))
+                                   :ARG0-of (s3x17 / 大-01
+                                                :aspect reversible-state
+                                                :modal-strength neutral-affirmative
+                                                :degree (s3x18 / 最))
+                                   :temporal (s3x19 / 当前))
+                         :modal-strength neutral-affirmative
+                         :aspect performance))
+     :modal-strength neutral-affirmative
+     :aspect activity)
+
+# alignment:
+s3x: 0-0
+s3x10: 0-0
+s3x11: 0-0
+s3x12: 0-0
+s3x13: 0-0
+s3x14: 0-0
+s3x15: 0-0
+s3x16: 0-0
+s3x17: 0-0
+s3x18: 0-0
+s3x19: 0-0
+s3x2: 0-0
+s3x3: 0-0
+s3x4: 0-0
+s3x5: 0-0
+s3x6: 0-0
+s3x7: 0-0
+s3x8: 0-0
+s3x9: 0-0
+
+# document level annotation:
+(s3s0 / sentence
+    :temporal ((root :depends-on s3x2)
+            (document-creation-time :before s3x10)
+            (document-creation-time :depends-on s3x19))
+    :modal ((author :neutral-affirmative s3x8)
+            (author :neutral-affirmative s3x3)
+            (author :neutral-affirmative s3x13)
+            (author :neutral-affirmative s3x17)
+            (author :neutral-affirmative s3x12)
+            (author :neutral-affirmative s3x)))
+
+
+################################################################################
+# meta-info
+# :: snt4
+Index: 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28
+Words: 一 个 是 政府 的 领导人 ， 一 个 是 资深 的 经济学家 ， 在 不同 场合 ， 从 不同 的 角度 道出 了 同样 的 现实 ，
+
+# sentence level graph:
+(s4x / and
+    :op1 (s4x2 / identity-91
+              :ARG1 (s4x3 / person
+                        :unit (s4x4 / 个)
+                        :quant 1)
+              :ARG2 (s4x5 / 领导人
+                         :mod (s4x6 / 政府)))
+    :op2 (s4x7 / identity-91
+        :ARG2 (s4x8 / 资深-01
+            :ARG0 (s4x9 / 经济学家)
+            :modal-strength neutral-affirmative
+            :aspect irreversible-state)
+        :ARG1 (s4p / person
+            :quant 1)
+            :unit (s4x1 / 个))
+    :op3 (s4x11 / 道出-01
+             :place (s4x12 / 场合
+                        :mod (s4x13 / 不同-01
+                                      :aspect inherent-state
+                                      :modal-strength neutral-affirmative))
+             :ARG0 (s4x14 / and
+                 :op1 s4x3
+                 :op2 s4p)
+             :aspect performance
+             :modal-strength neutral-affirmative
+             :manner (s4x18 / 角度
+                         :mod (s4x19 / 不同-01
+                                      :aspect inherent-state
+                                      :modal-strength neutral-affirmative))
+             :ARG1 (s4x20 / 现实
+                       :mod (s4x21 / 同样-01
+                                    :aspect inherent-state
+                                    :modal-strength neutral-affirmative))))
+
+# alignment:
+s4x: 0-0
+s4x1: 9-9
+s4x11: 0-0
+s4x12: 0-0
+s4x13: 0-0
+s4x14: 0-0
+s4x18: 0-0
+s4x19: 0-0
+s4x2: 0-0
+s4x20: 0-0
+s4x21: 0-0
+s4x3: 0-0
+s4x4: 0-0
+s4x5: 0-0
+s4x6: 0-0
+s4x7: 0-0
+s4x8: 0-0
+s4x9: 0-0
+
+# document level annotation:
+(s4s0 / sentence
+    :modal ((author :neutral-affirmative s4x8)
+            (author :neutral-affirmative s4x13)
+            (author :neutral-affirmative s4x11)
+            (author :neutral-affirmative s4x19)
+            (author :neutral-affirmative s4x21)))
+
+
+################################################################################
+# meta-info
+# :: snt5
+Index: 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20
+Words: 不得不 说 “ 腐败 之 危 ” 已 渗透 到 每 一 位 有 忧患 意识 的 有识之士 心中 。
+
+# sentence level graph:
+(s5x2 / 说-01
+    :ARG1 (s5x3 / 渗透-01
+        :modal-strength neutral-affirmative
+        :aspect performance
+        :ARG1 (s5x4 / 心中
+            :poss (s5x5 / 有识之士
+                :unit (s5x6 / 位)
+                :mod (s5x7 / 每)
+                :quant 1
+                :ARG0-of (s5x8 / 有-01
+                    :ARG1 (s5x9 / 意识
+                        :mod (s5x10 / 忧患-01
+                            :aspect reversible-state
+                            :modal-strength neutral-affirmative)))))
+        :ARG0 (s5x12 / 危
+            :ARG0-of (s5x1 / 腐败-01
+                :aspect state
+                :modal-strength neutral-affirmative)))
+    :aspect activity
+    :modal-strength full-affirmative
+    :mod (s5x / 不得不))
+
+# alignment:
+s5x: 1-1
+s5x1: 4-4
+s5x10: 15-15
+s5x12: 0-0
+s5x2: 0-0
+s5x3: 0-0
+s5x4: 0-0
+s5x5: 0-0
+s5x6: 0-0
+s5x7: 0-0
+s5x8: 0-0
+s5x9: 0-0
+
+# document level annotation:
+(s5s0 / sentence
+    :modal ((author :neutral-affirmative s5x3)
+            (author :neutral-affirmative s5x10)
+            (author :neutral-affirmative s5x1)))
+
+
+################################################################################
+# meta-info
+# :: snt6
+Index: 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30
+Words: “ 衙门 八 字 朝 南 开 ， 有 理 无 钱 莫 进来 ” 古往进来 腐败 问题 屡见不鲜 ， 尤其是 政府 部门 ， 权力 寻租 的 现象 比比皆是 。
+
+# sentence level graph:
+(s6x / and
+     :op1 (s6x2 / and
+              :op2 (s6x3 / have-condition-91
+                        :ARG1 (s6x4 / and
+                                   :op2 (s6x5 / 无-01
+                                             :modal-strength neutral-affirmative
+                                             :ARG1 (s6x6 / 钱)
+                                             :aspect state)
+                                   :op1 (s6x7 / 有-01
+                                             :ARG1 (s6x8 / 理)
+                                             :aspect state
+                                             :modal-strength neutral-affirmative))
+                        :ARG2 (s6x9 / 进来-01
+                            :modal-strength neutral-negative
+                            :polarity -
+                            :aspect activity))
+              :op1 (s6x10 / 开-010
+                  :aspect undirected-activity
+                  :modal-strength neutral-affirmative
+                        :manner (s6x11 / 八字)
+                        :direction (s6x12 / 南)
+                        :ARG0 (s6x13 / 衙门)))
+     :op3 (s6x14 / 比比皆是-01
+          :mod (s6x21 / 尤其是)
+          :modal-strength full-affirmative
+          :aspect activity
+          :ARG0 (s6x15 / 现象
+              :ARG1-of (s6x1 / 寻租-00
+                  :aspect activity
+                  :modal-strength neutral-affirmative
+                  :ARG0 (s6x19 / 部门
+                      :mod (s6x20 / 政府))
+                  :instrument (s6x18 / 权力))))
+     :op2 (s6x22 / 屡见不鲜-01
+               :temporal (s6x23 / 古往今来)
+               :modal-strength full-affirmative
+               :aspect activity
+               :ARG1 (s6x24 / 问题
+                          :topic (s6x25 / 腐败))))
+
+# alignment:
+s6x: 0-0
+s6x1: 26-26
+s6x10: 0-0
+s6x11: 0-0
+s6x12: 0-0
+s6x13: 0-0
+s6x14: 0-0
+s6x15: 0-0
+s6x18: 0-0
+s6x19: 0-0
+s6x2: 0-0
+s6x20: 0-0
+s6x21: 0-0
+s6x22: 0-0
+s6x23: 0-0
+s6x24: 0-0
+s6x25: 0-0
+s6x3: 0-0
+s6x4: 0-0
+s6x5: 0-0
+s6x6: 0-0
+s6x7: 0-0
+s6x8: 0-0
+s6x9: 0-0
+
+# document level annotation:
+(s6s0 / sentence
+    :temporal ((past-reference :contained s6x23))
+    :modal ((author :neutral-affirmative s6x5)
+            (author :neutral-affirmative s6x7)
+            (author :neutral-negative s6x9)
+            (author :neutral-affirmative s6x10)
+            (author :full-affirmative s6x14)
+            (author :neutral-affirmative s6x1)
+            (author :full-affirmative s6x22)))
+
+
+################################################################################
+# meta-info
+# :: snt7
+Index: 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17
+Words: 为何 如此 明目张胆 ， 自觉 原因 有 如下 几 方面 ： 一 是 源头 治理 不力 。
+
+# sentence level graph:
+(s7x / and
+    :op2 (s7x2 / 自觉-01
+             :ARG1 (s7x3 / 有-03
+                 :ARG1 (s7x1 / 方面
+                     :ARG1-of (s7x4 / 原因)
+                     :ARG2-of (s7x5 / include-91
+                         :ARG1 (s7x6 / 不力-01
+                             :aspect reversible-state
+                             :modal-strength neutral-affirmative
+                             :li (s7x7 / 1)
+                             :ARG0 (s7x8 / 治理-01
+                                 :ARG1 (s7x9 / 源头)
+                                 :aspect activity
+                                 :modal-strength neutral-affirmative)))
+                     :quant (s7x12 / 几)
+                     :mod (s7x11 / 如下)))
+             :aspect activity
+             :modal-strength neutral-affirmative)
+    :op1 (s7x13 / 明目张胆-01
+        :polarity umr-unknown
+        :mode interrogative
+        :degree (s7x14 / 如此-01)
+        :modal-strength full-affirmative))
+
+# alignment:
+s7x: 0-0
+s7x1: 10-10
+s7x11: 0-0
+s7x12: 0-0
+s7x13: 0-0
+s7x14: 0-0
+s7x2: 0-0
+s7x3: 0-0
+s7x4: 6-6
+s7x5: 0-0
+s7x6: 0-0
+s7x7: 0-0
+s7x8: 0-0
+s7x9: 0-0
+
+# document level annotation:
+(s7s0 / sentence
+    :modal ((author :neutral-affirmative s7x6)
+            (author :neutral-affirmative s7x8)
+            (author :neutral-affirmative s7x2)
+            (author :full-affirmative s7x13))
+    :coref ((s7x1 :subset-of s7x6)))
+
+
+################################################################################
+# meta-info
+# :: snt8
+Index: 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16
+Words: “ 小 洞 不 补 ， 大 洞 吃苦 ” 的 道理 大家 都 懂 。
+
+# sentence level graph:
+(s8x / 懂-01
+    :ARG0 (s8x2 / 大家
+              :manner (s8x3 / 都))
+    :ARG1 (s8x4 / 道理
+        :ARG1-of (s8h1 / have-condition-91
+            :ARG1 (s8x13 / 吃苦-01
+                :modal-strength neutral-affirmative
+                :aspect state
+                :cause (s8x8 / 洞
+                    :mod (s8x9 / 大-01
+                        :aspect reversible-state
+                        :modal-strength neutral-affirmative)))
+            :ARG2 (s8x1 / 补-01
+                :modal-strength neutral-negative
+                :aspect state
+                :polarity -
+                :ARG1 (s8x11 / 洞
+                    :mod (s8x12 / 小-01
+                        :aspect reversible-state
+                        :modal-strength neutral-affirmative)))))
+    :aspect habitual
+    :modal-strength neutral-affirmative)
+
+# alignment:
+s8x: 0-0
+s8x1: 5-5
+s8x11: 0-0
+s8x12: 0-0
+s8x13: 3-3,9-9
+s8x2: 0-0
+s8x3: 0-0
+s8x4: 0-0
+s8x8: 0-0
+s8x9: 0-0
+
+# document level annotation:
+(s8s0 / sentence
+    :modal ((author :neutral-affirmative s8x13)
+            (author :neutral-affirmative s8x9)
+            (author :neutral-negative s8x1)
+            (author :neutral-affirmative s8x12)
+            (author :neutral-affirmative s8x)))
+
+
+################################################################################
+# meta-info
+# :: snt9
+Index: 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15
+Words: 收入 不 透明 ， 尤其是 高官 收入 不 透明 是 最 大 的 隐患 。
+
+# sentence level graph:
+(s9x / identity-91
+    :ARG1 (s9x3 / 透明-01
+        :aspect reversible-state
+        :modal-strength neutral-negative
+        :ARG2-of (s9x7 / include-91
+            :ARG1 (s9x8 / 透明-01
+                :polarity -
+                :aspect reversible-state
+                :modal-strength neutral-negative
+                :ARG0 (s9x9 / 收入-02
+                    :aspect imperfective
+                    :modal-strength neutral-affirmative
+                    :ARG0 (s9x10 / 高官))
+            :mod (s9x11 / 尤其)))
+        :ARG0 (s9x12 / 收入-02
+            :aspect imperfective
+            :modal-strength neutral-affirmative)
+        :polarity -)
+     :ARG2 (s9x2 / 隐患
+         :mod (s9x1 / 大-01
+             :aspect reversible-state
+             :degree (s9x4 / 最)
+             :modal-strength neutral-affirmative)))
+
+# alignment:
+s9x: 0-0
+s9x1: 12-12
+s9x10: 0-0
+s9x11: 0-0
+s9x12: 1-1
+s9x2: 0-0
+s9x3: 3-3
+s9x4: 0-0
+s9x7: 0-0
+s9x8: 0-0
+s9x9: 0-0
+
+# document level annotation:
+(s9s0 / sentence
+    :modal ((author :neutral-negative s9x3)
+            (author :neutral-negative s9x8)
+            (author :neutral-affirmative s9x9)
+            (author :neutral-affirmative s9x12)
+            (author :neutral-affirmative s9x1))
+    :coref ((s9x3 :subset-of s9x8)))
+
+
+################################################################################
+# meta-info
+# :: snt10
+Index: 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26
+Words: 二 是 惩治 力度 不 强 。 老人家 时代 的 刘青山 、 张子善 事件 ， 着实 对 那时 的 贪官们 起到 了 震撼 的 效应 。
+
+# sentence level graph:
+(s10x / and
+    :op2 (s10x2 / 起到-01
+        :mod (s10x17 / 着实)
+        :ARG1 (s10x3 / 效应
+            :mod (s10x1 / 震撼-01
+                :ARG1 (s10x4 / 贪官们
+                    :temporal (s10x5 / 那时))
+                :aspect state
+                :modal-strength full-affirmative))
+        :ARG0 (s10x6 / 事件
+            :temporal (s10x10 / 时代
+                :mod (s10x11 / 老人家))
+            :topic (s10x12 / and
+                :op2 (s10x15 / person
+                    :name (s10x16 / name
+                        :op1 "张子善"))
+                :op1 (s10x13 / person
+                    :name (s10x14 / name
+                        :op1 "刘青山")))))
+    :op1 (s10x18 / 强-01
+               :polarity -
+               :modal-strength neutral-negative
+               :ARG0 (s10x19 / 力度
+                          :mod (s10x20 / 惩治))
+               :aspect reversible-state
+               :li (s10x21 / 2)))
+
+# alignment:
+s10x: 0-0
+s10x1: 23-23
+s10x10: 0-0
+s10x11: 0-0
+s10x12: 0-0
+s10x13: 0-0
+s10x14: 0-0
+s10x15: 0-0
+s10x16: 0-0
+s10x17: 0-0
+s10x18: 0-0
+s10x19: 0-0
+s10x2: 0-0
+s10x20: 0-0
+s10x21: 0-0
+s10x3: 0-0
+s10x4: 20-20
+s10x5: 18-18
+s10x6: 0-0
+
+# document level annotation:
+(s10s0 / sentence
+    :temporal ((document-creation-time :before s10x11))
+    :modal ((author :full-affirmative s10x1)
+            (author :neutral-negative s10x18)))
+
+
+################################################################################
+# meta-info
+# :: snt11
+Index: 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23
+Words: 而 当下 很多 的 大 贪官 ， 不是 迟迟 不 宣判 ， 就是 判 后 鲜 有 执行 到底 的 ， 无奈 ！
+
+# sentence level graph:
+(s11x / and
+    :op2 (s11x2 / 无奈-01
+             :modal-strength neutral-affirmative
+             :aspect performance
+             :mode expressive)
+    :op1 (s11x3 / exclusive-disj
+             :op1 (s11x4 / 宣判-01
+                       :polarity -
+                       :ARG0 (s11x5 / 贪官
+                                  :quant (s11x6 / 很多)
+                                  :ARG0-of (s11x7 / 大-01
+                                                :modal-strength neutral-affirmative
+                                                :aspect state)
+                                  :temporal (s11x9 / 当下))
+                       :manner (s11x10 / 迟迟)
+                       :modal-strength neutral-affirmative
+                       :aspect performance)
+             :op2 (s11x11 / 执行-01
+                      :ARG0 s11x5
+                      :aspect performance
+                      :modal-strength neutral-affirmative
+                      :manner (s11x12 / 到底)
+                      :temporal (s11x13 / 后
+                          :mod (s11x1 / 判-01))
+                      :frequency (s11x15 / 鲜))))
+
+# alignment:
+s11x: 0-0
+
+# document level annotation:
+(s11s0 / sentence
+    :temporal ((present-reference :overlap s11x9)
+            (s11x1 :before s11x11))
+    :modal ((root :modal author)
+            (author :neutral-affirmative s11x2)
+            (author :neutral-affirmative s11x7)
+            (author :neutral-affirmative s11x4)
+            (author :neutral-affirmative s11x11)))
+
+
+################################################################################
+# meta-info
+# :: snt12
+Index: 1 2 3 4 5 6 7
+Words: 三 是 监管 措施 不 多 。
+
+# sentence level graph:
+(s12x / 多-03
+    :li (s12x2 / 3)
+    :ARG0 (s12x3 / 措施
+        :ARG0-of (s12x1 / 监管-01
+            :aspect activity)
+            :modal-strength neutral-affirmative)
+    :aspect activity
+    :modal-strength neutral-negative
+    :polarity -)
+
+# alignment:
+s12x: 0-0
+s12x1: 3-3
+s12x2: 0-0
+s12x3: 0-0
+
+# document level annotation:
+(s12s0 / sentence
+    :modal ((author :neutral-affirmative s12x3)
+            (author :neutral-negative s12x)))
+
+
+################################################################################
+# meta-info
+# :: snt13
+Index: 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34
+Words: 监管 措施 理应 是 全方位 立体式 ， 加上 如今 信息 技术 如此 发达 ， 想 做 有效 的 监管 还 是 易如反掌 的 ， 关键 是 不少 腐败 官员 愿意 这么 做 吗 ？
+
+# sentence level graph:
+(s13x / and
+    :op2 (s13x2 / identity-91
+        :ARG1 (s13x3 / 关键)
+        :ARG2 (s13x4 / 愿意-01
+            :ARG0 (s13x7 / 官员
+                :ARG0-of (s13x8 / 腐败-01
+                    :modal-strength neutral-affirmative
+                    :aspect state)
+                :quant (s13x9 / 不少))
+            :mode interrogative
+            :ARG1 (s13x5 / 做-01
+                :modal-strength neutral-negative
+                :aspect activity
+                :manner (s13x6 / 这么))
+        :aspect activity
+        :modal-strength neutral-negative))
+    :op1 (s13h / have-cause-91
+        :ARG1 (s13x11 / 易如反掌
+            :ARG0 (s13x12 / 想-02
+                :aspect activity
+                :modal-strength neutral-affirmative
+                :ARG1 (s13x13 / 做-01
+                    :aspect activity
+                    :modal-strength neutral-affirmative
+                    :ARG1 (s13x14 / 监管
+                        :ARG0-of (s13x15 / 有效-01
+                            :aspect activity
+                            :modal-strength neutral-affirmative))))
+            :mod (s13x16 / 还))
+        :ARG2 (s13x1 / 加上-01
+            :modal-strength neutral-affirmative
+            :ARG2 (s13x17 / 发达-01
+                :aspect state
+                :degree (s13x18 / 如此)
+                :modal-strength full-affirmative
+                :ARG0 (s13x19 / 技术
+                    :mod (s13x20 / 信息)
+                    :temporal (s13x21 / 如今)))
+            :aspect performance)
+            :ARG1 (s13x22 / 理应-01
+                :ARG0 (s13x23 / identity-91
+                    :ARG1 (s13x24 / 措施
+                        :mod (s13x25 / 监管))
+                :ARG2 (s13x26 / and
+                    :op2 (s13x27 / 立体式)
+                    :op1 (s13x28 / 全方位))))))
+
+# alignment:
+s13x: 0-0
+s13x1: 8-8
+s13x11: 0-0
+s13x12: 0-0
+s13x13: 0-0
+s13x14: 0-0
+s13x15: 0-0
+s13x16: 0-0
+s13x17: 0-0
+s13x18: 0-0
+s13x19: 0-0
+s13x2: 0-0
+s13x20: 0-0
+s13x21: 0-0
+s13x22: 0-0
+s13x23: 0-0
+s13x24: 0-0
+s13x25: 0-0
+s13x26: 0-0
+s13x27: 0-0
+s13x28: 0-0
+s13x3: 0-0
+s13x4: 0-0
+s13x5: 0-0
+s13x6: 0-0
+s13x7: 0-0
+s13x8: 0-0
+s13x9: 0-0
+
+# document level annotation:
+(s13s0 / sentence
+    :temporal ((present-reference :depends-on s13x21))
+    :modal ((author :neutral-affirmative s13x8)
+            (author :neutral-negative s13x5)
+            (author :neutral-negative s13x4)
+            (author :neutral-affirmative s13x12)
+            (author :neutral-affirmative s13x13)
+            (author :neutral-affirmative s13x15)
+            (author :neutral-affirmative s13x1)
+            (author :full-affirmative s13x17))
+    :coref ((s13x24 :same-event s13x6)))
+
+
+################################################################################
+# meta-info
+# :: snt14
+Index: 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37
+Words: “ 文臣 不 爱 钱 ， 武臣 不 惜 死 ， 天下 太平 矣 ” ， 让 我们 再次 共勉 抗 金 名将 岳飞 的 这 句 名言 ， 真正 感受 其中 壮志未酬 的 感叹 吧 ！
+
+# sentence level graph:
+(s14x / and
+     :op1 (s14x2 / have-condition-91
+                :modal-strength neutral-affirmative
+                :ARG2 (s14x3 / and
+                           :op2 (s14x4 / 惜-01
+                                     :polarity -
+                                     :aspect state
+                                     :ARG1 (s14x5 / 死-01)
+                                     :modal-strength neutral-affirmative
+                                     :ARG0 (s14x6 / 武臣))
+                           :op1 (s14x7 / 爱-01
+                                     :ARG1 (s14x8 / 钱)
+                                     :aspect state
+                                     :ARG0 (s14x9 / 文臣)
+                                     :modal-strength neutral-affirmative
+                                     :polarity -))
+                :aspect generic
+                :ARG1 (s14x10 / 太平-01
+                          :mode expressive
+                          :ARG0 (s14x11 / 天下)))
+     :op2 (s14x12 / 让-02
+         :ARG2 (s14a / and
+             :op2 (s14x14 / 共勉
+                 :ARG0 (s14x16 / 名言
+                     :possessor (s14p / person
+                          :ARG1-of (s14h / identity-91
+                              :ARG0 (s14x19 / 名将
+                                  :mod (s14x20 / 抗金)))
+                          :name (s14n / name
+                               :op1 "岳飞"))
+                     :unit (s14x18 / 句)
+                     :mod (s14x17 / 这))
+                 :manner (s14x15 / 再次))
+             :op1 (s14x1 / 感受-01
+                 :ARG1 (s14x22 / 感叹
+                     :mod (s14x23 / 壮志未酬-01))
+                 :manner (s14x21 / 真正-01)))
+         :ARG1 (s14x13 / individual-person
+                    :refer-person 1st
+                    :refer-number plural)
+         :aspect inceptive
+         :modal-strength neutral-affirmative))
+
+# alignment:
+s14p: 23-23
+s14x: 0-0
+s14x1: 31-31
+s14x10: 0-0
+s14x11: 0-0
+s14x12: 0-0
+s14x13: 0-0
+s14x14: 20-20
+s14x15: 19-19
+s14x16: 28-28
+s14x17: 26-26
+s14x18: 27-27
+s14x19: 23-23
+s14x2: 0-0
+s14x20: 22-22
+s14x21: 30-30
+s14x22: 35-35
+s14x23: 33-33
+s14x3: 0-0
+s14x4: 0-0
+s14x5: 0-0
+s14x6: 0-0
+s14x7: 0-0
+s14x8: 0-0
+s14x9: 0-0
+
+# document level annotation:
+(s14s0 / sentence
+    :modal ((author :neutral-affirmative s14x2)
+            (author :neutral-affirmative s14x5)
+            (author :neutral-affirmative s14x9)
+            (author :neutral-affirmative s14x13)))
+
+
